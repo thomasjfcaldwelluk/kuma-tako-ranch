@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* === Colors === */
+  --color-primary-green: #2F5D50;
+  --color-primary-cedar: #7A5A3A;
+  --color-primary-sage: #8DAA91;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-neutral-cream: #F8F5EF;
+  --color-neutral-soft: #EAE6DD;
+  --color-neutral-white: #FFFFFF;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --color-text-primary: #2B2B2B;
+  --color-text-body: #4A4A4A;
+  --color-text-secondary: #6B6B6B;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-status-success: #2E7D32;
+  --color-status-warning: #E6A23C;
+  --color-status-error: #C62828;
+  --color-status-info: #1976D2;
+
+  /* === Radius === */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* === Spacing (extends Tailwind's default scale) === */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* === Typography === */
+--font-heading: var(--font-poppins), sans-serif;
+  --font-body: var(--font-poppins), sans-serif;
 }

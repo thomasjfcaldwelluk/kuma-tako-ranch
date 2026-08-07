@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Grid from "../layout/Grid";
 import Section from "../layout/Section";
 

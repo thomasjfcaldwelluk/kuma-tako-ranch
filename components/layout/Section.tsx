@@ -2,11 +2,12 @@ import Container from "./Container";
 
 type SectionProps = {
   as?: "section" | "header" | "footer" | "div";
-  spacing?: "sm" | "md" | "lg" | "xl";
+  spacing?: "xs" | "sm" | "md" | "lg" | "xl";
   children: React.ReactNode;
 };
 
 const spacingMap = {
+  xs: "py-xs",
   sm: "py-lg",
   md: "py-xl",
   lg: "py-2xl",
@@ -15,7 +16,7 @@ const spacingMap = {
 
 export default function Section({
   as: Tag = "section",
-  spacing = "lg",
+  spacing = "xs",
   children,
 }: SectionProps) {
   return (

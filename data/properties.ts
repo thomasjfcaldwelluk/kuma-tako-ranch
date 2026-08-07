@@ -45,5 +45,47 @@ export const properties: Property[] = [
       { question: "Is there a sewer hookup?", answer: "No, but a dump station is available on-site." },
     ],
   },
+   {
+    slug: "rv-site-3",
+    name: "RV Site 3",
+    type: "rv-site",
+    availability: "available",
+    beds: 0,
+    guests: 4,
+    bathrooms: 0,
+    description:
+      "RV site with electric and water hookups, set among the pines with easy access to the main ranch grounds.",
+    amenities: ["fire-pit", "full-hookups"],
+    photos: [
+      "kuma-tako-ranch/rv-site-3/hero",
+      "kuma-tako-ranch/rv-site-3/view",
+    ],
+    hospitableWidgetId: "widget-id-rv3",
+    faqs: [
+      { question: "What's the max RV length?", answer: "30ft max." },
+      { question: "Is there a sewer hookup?", answer: "No, but a dump station is available on-site." },
+    ],
+  },
+     {
+    slug: "rv-site-4",
+    name: "RV Site 4",
+    type: "rv-site",
+    availability: "available",
+    beds: 0,
+    guests: 4,
+    bathrooms: 0,
+    description:
+      "RV site with electric and water hookups, set among the pines with easy access to the main ranch grounds.",
+    amenities: ["fire-pit", "full-hookups"],
+    photos: [
+      "kuma-tako-ranch/rv-site-4/hero",
+      "kuma-tako-ranch/rv-site-4/view",
+    ],
+    hospitableWidgetId: "widget-id-rv4",
+    faqs: [
+      { question: "What's the max RV length?", answer: "30ft max." },
+      { question: "Is there a sewer hookup?", answer: "No, but a dump station is available on-site." },
+    ],
+  },
   // Add rv-site-3, rv-site-4, etc. following the same shape
 ];

@@ -1,8 +1,14 @@
+import {faqs} from "@/data/faqs";
+
 export default function FAQPage() {
   return (
     <div>
-      <h1>FAQ Page</h1>
-      <p>This is the FAQ page of the Kuma Tako Ranch website.</p>
+      {faqs.map((faq, index) => (
+        <div key={index}>
+          <h2>{faq.question}</h2>
+          <p>{faq.answer}</p>
+        </div>
+      ))}
     </div>
   );
 }

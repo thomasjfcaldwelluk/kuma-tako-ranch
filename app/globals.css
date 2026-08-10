@@ -124,7 +124,7 @@ body {
 .text-body {
   font-size: var(--text-body);
   line-height: var(--leading-body);
-  color: var(--color-text-primary);
+  /* color: var(--color-text-primary); */
 }
 
 .text-small {

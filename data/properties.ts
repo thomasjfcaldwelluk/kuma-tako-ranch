@@ -41,7 +41,7 @@ export const properties: Property[] = [
     ],
     hospitableWidgetId: "widget-id-rv2",
     faqs: [
-      { question: "What's the max RV length?", answer: "30ft max." },
+      { question: "What's the max RV length?", answer: "60ft max." },
       { question: "Is there a sewer hookup?", answer: "No, but a dump station is available on-site." },
     ],
   },

@@ -1,5 +1,7 @@
 // import { CldImage } from "next-cloudinary";
 
+import Button from "../ui/Button";
+
 
 export default function Hero() {
   return (
@@ -13,6 +15,9 @@ export default function Hero() {
 /> */}
       <h1>Welcome to Our Property</h1>
       <h3>Discover the perfect place to stay</h3>
+      <Button variant="primary" size="lg" href="/stay">
+        Book Now
+      </Button>
     </div>
   );
 }

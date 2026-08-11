@@ -1,4 +1,9 @@
-import Link from "next/link";
+"use client";
+
+import Card from "@/components/ui/Card";
+import Badge from "@/components/ui/Badge";
+import Icon from "@/components/ui/Icon";
+import Button from "@/components/ui/Button";
 import { Property } from "@/types/property";
 
 export default function PropertyCard({
@@ -7,41 +12,39 @@ export default function PropertyCard({
   availability,
   beds,
   guests,
-  amenities,
   description,
+  photos,
 }: Property) {
   return (
-    <div className="bg-neutral-white rounded-lg shadow-sm overflow-hidden flex flex-col">
-      {/* Photo placeholder for now - we'll wire up CldImage later */}
-      <div className=" bg-neutral-soft" />
+    <Card imagePublicId={photos[0]} imageAlt={name}>
+      <Badge style={availability === "available" ? "success" : "warning"}>
+        {availability === "available" ? "Available Now" : "Limited Availability"}
+      </Badge>
 
-      <div className="p-md flex flex-col gap-sm">
-        <span
-          className={`text-caption px-sm py-xs rounded-full w-fit ${
-            availability === "available"
-              ? "bg-status-success/10 text-status-success"
-              : "bg-status-warning/10 text-status-warning"
-          }`}
-        >
-          {availability === "available" ? "Available Now" : "Limited Availability"}
+      <h3 className="text-h3">{name}</h3>
+
+      <div className="flex gap-md text-small text-text-secondary">
+        {beds > 0 && (
+          <span className="flex items-center gap-xs">
+            <Icon name="bed" size="sm" />
+            {beds} Beds
+          </span>
+        )}
+        <span className="flex items-center gap-xs">
+          <Icon name="guests" size="sm" />
+          {guests} Guests
         </span>
-
-        <h3 className="text-h3">{name}</h3>
-
-        <div className="flex gap-sm text-caption text-text-secondary">
-          {beds > 0 && <span>{beds} Beds</span>}
-          <span>{guests} Guests</span>
-        </div>
-
-        <p className="text-small text-text-secondary">{description}</p>
-
-        <Link
-          href={`/stay/${slug}`}
-          className="bg-primary-green text-neutral-white text-center px-lg py-sm rounded-md font-semibold mt-sm"
-        >
-          Book Now
-        </Link>
+        <span className="flex items-center gap-xs">
+          <Icon name="wifi" size="sm" />
+          Wifi
+        </span>
       </div>
-    </div>
+
+      <p className="text-small text-text-secondary">{description}</p>
+
+      <Button href={`/stay/${slug}`} variant="primary" size="sm" className="w-full">
+        Book Now
+      </Button>
+    </Card>
   );
 }

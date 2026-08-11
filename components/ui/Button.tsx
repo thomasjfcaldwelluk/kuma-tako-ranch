@@ -2,6 +2,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   href?: string;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -13,18 +14,22 @@ const variantStyles = {
 };
 
 const sizeStyles = {
-  sm: "px-md py-xs text-caption",
-  md: "px-lg py-sm text-small",
-  lg: "px-xl py-md text-body",
+  sm: "px-md py-xs text-[length:var(--text-caption)]",
+  md: "px-lg py-sm text-[length:var(--text-small)]",
+  lg: "px-xl py-md text-[length:var(--text-body)]",
 };
 
 export default function Button({
   variant = "primary",
   size = "md",
   href,
+  className = "",
   children,
 }: ButtonProps) {
-  const classes = `font-heading font-semibold rounded-md transition-colors ${variantStyles[variant]} ${sizeStyles[size]}`;
+  const baseStyles =
+    "font-heading font-semibold rounded-md transition-colors inline-flex items-center justify-center text-center";
+
+  const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {
     return (

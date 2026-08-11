@@ -1,18 +1,21 @@
 import { testimonials } from "@/data/testimonials";
 import Section from "../layout/Section";
 import Grid from "../layout/Grid";
+import Header from "../ui/Heading";
+import Card from "../ui/Card";
 
 
 export default function Testimonials() {
   return (
-    <Section>
+    <Section as="section" spacing="lg" height="auto" bgColor="cream">
+      <Header title="What Our Guests Say" />
       <Grid cols={3} gap="md">
         {testimonials.map((testimonial, index) => (
-          <div key={index}>
+          <Card key={index}>
             <p>{testimonial.quote}</p>
             <p>- {testimonial.name}</p>
             <p>{testimonial.stayDetail}</p>
-          </div>
+          </Card>
         ))}
       </Grid>
     </Section>

@@ -11,7 +11,7 @@ const rvSiteDefaults = {
 
   availability: "available" as const,
 
-  guests: 4,
+  guests: 6,
   beds: 0,
   bathrooms: 0,
 
@@ -29,7 +29,7 @@ const rvSiteDefaults = {
     "trash-bins",
   ],
 
-  photos: [],
+  photos: ['https://res.cloudinary.com/djjqsmlei/image/upload/v1786555048/Kuma%20Tako%20Ranch/RV/AnimalTracks.jpg'],
 
   hospitableWidgetId: "",
 
@@ -291,7 +291,7 @@ export const properties: Property[] = [
     name: "Animal Tracks",
 
     photos: [
-      "kuma-tako-ranch/animal-tracks/hero",
+      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555048/Kuma%20Tako%20Ranch/RV/AnimalTracks.jpg",
       "kuma-tako-ranch/animal-tracks/view",
     ],
 
@@ -306,7 +306,7 @@ export const properties: Property[] = [
     name: "Bear Site",
 
     photos: [
-      "kuma-tako-ranch/bear-site/hero",
+      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555048/Kuma%20Tako%20Ranch/RV/BearSite.jpg",
       "kuma-tako-ranch/bear-site/view",
     ],
 
@@ -321,7 +321,7 @@ export const properties: Property[] = [
     name: "Elk Crossing",
 
     photos: [
-      "kuma-tako-ranch/elk-crossing/hero",
+      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555047/Kuma%20Tako%20Ranch/RV/ElkCrossing.jpg",
       "kuma-tako-ranch/elk-crossing/view",
     ],
 
@@ -336,8 +336,8 @@ export const properties: Property[] = [
     name: "Octopus Site",
 
     photos: [
-      "kuma-tako-ranch/octopus-site/hero",
-      "kuma-tako-ranch/octopus-site/view",
+      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555047/Kuma%20Tako%20Ranch/RV/ElkCrossing.jpg",
+      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555047/Kuma%20Tako%20Ranch/RV/ElkCrossing.jpg",
     ],
 
     hospitableWidgetId: "widget-id-octopus",

@@ -2,14 +2,15 @@ import Container from "./Container";
 
 type SectionProps = {
   as?: "section" | "header" | "footer" | "div";
-  spacing?: "xs" | "sm" | "md" | "lg" | "xl";
+  spacing?: "none" | "xs" | "sm" | "md" | "lg" | "xl";
   height?: "auto" | "sm" | "md" | "lg" | "xl" | "full";
-  bgColor?: "primary" | "secondary" | "neutral" | "darkPrimary"|"cream";
+  bgColor?: "primary" | "secondary" | "neutral" | "dark" |"cream";
   className?: string;
   children: React.ReactNode;
 };
 
 const spacingMap = {
+  none:" ",
   xs: "py-xs",
   sm: "py-lg",
   md: "py-xl",
@@ -21,7 +22,7 @@ const bgColorMap = {
   primary: "bg-primary-green",
   secondary: "bg-primary-sage",
   neutral: "bg-neutral-white",
-  darkPrimary: "bg-primary-green-dark",
+  dark: "bg-primary-dark-green",
   cream: "bg-neutral-cream",
 };
 
@@ -36,7 +37,7 @@ const heightMap = {
 
 export default function Section({
   as: Tag = "section",
-  spacing = "xs",
+  spacing = "none",
   height = "auto",
   bgColor = "neutral",
   className = "",

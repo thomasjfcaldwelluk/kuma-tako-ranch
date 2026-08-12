@@ -4,6 +4,7 @@ import PropertyCard from '@/components/sections/PropertyCard'
 import Grid from '@/components/layout/Grid'
 import Section from '@/components/layout/Section'
 import { properties } from '@/data/properties'
+import { homeGallery } from "@/data/gallery";
 import OurStory from '@/components/sections/OurStory'
 import Cta from '@/components/sections/Cta'
 import Header from '@/components/ui/Heading'
@@ -21,9 +22,9 @@ export default function Home() {
       buttonLabel="Check Availability"
       buttonHref="/stay"
        />
-      <Section as="section" spacing="lg" height="auto" >
+      <Section as="section" spacing="none" height="auto" >
         <Header title="Where You Will Stay" />
-        <Grid cols={5} gap="sm">
+        <Grid cols={5} gap="sm" spacing='sm'>
           {properties.map((property) => (
             <PropertyCard key={property.slug} {...property} />
           ))}
@@ -33,11 +34,11 @@ export default function Home() {
         imagePublicId="https://res.cloudinary.com/djjqsmlei/image/upload/v1786029834/Kuma%20Tako%20Ranch/House%20Images/Outside/1-77_mryec8.jpg"
         heading="Our Story"
         subheading="From Working Farm to Mountain Retreat"
-        description="Kuma Tako Ranch has been our families home. What started as a working farm has grown into a peaceful retreat, where we now welcome guests to experience the same mountains, forests, and quiet mornings we have always loved."
+        description="Kuma Tako Ranch has been our family's home. What started as a working farm has grown into a peaceful retreat, where we now welcome guests to experience the same mountains, forests, and quiet mornings we've always loved."
         alt="Our Story"
       />
       <HomeThingsToDo/>
-      <HomeGallery/>
+      <HomeGallery images={homeGallery}/>
       <Testimonials/>
       <Cta/>
       <HomeContact/>

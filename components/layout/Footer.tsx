@@ -1,17 +1,121 @@
-import Grid from "./Grid";
-import Section from "./Section";
+import Link from "next/link";
+
+import Container from "./Container";
+import Icon from "../ui/Icon";
+
+import {
+  footerColumns,
+  footerContact,
+  footerSocials,
+  footerTagline,
+} from "@/data/footer";
 
 export default function Footer() {
   return (
-    <Section as="footer" spacing="md" height="auto" bgColor="darkPrimary" >
-      <Grid cols={3} >
-        <div className="flex flex-col items-center justify-center gap-sm">
-          <h2 className="text-h3 text-neutral-white">Contact Us</h2>
-          <p className="text-body text-neutral-white">123 Main Street, Anytown, USA</p>
-          <p className="text-body text-neutral-white">(123) 456-7890</p>
-          <p className="text-body text-neutral-white">info@kumatakoranch.com</p>
+    <footer className="bg-primary-dark-green p-2xl">
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-lg">
+
+          {/* Branding */}
+          <div className="flex flex-col gap-sm">
+            <h2 className="text-h3 text-neutral-white">
+              Kuma Tako Ranch
+            </h2>
+
+            <p className="text-small text-neutral-white/80">
+              {footerTagline}
+            </p>
+
+            <div className="flex gap-sm mt-xs">
+              {footerSocials.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  aria-label={social.name}
+                >
+                  <Icon
+                    name={social.name}
+                    size="sm"
+                    className="text-neutral-white"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer link columns */}
+          {footerColumns.map((column) => (
+            <div
+              key={column.heading}
+              className="flex flex-col gap-sm"
+            >
+              <h3 className="text-small font-semibold text-neutral-white">
+                {column.heading}
+              </h3>
+
+              {column.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-small text-neutral-white/80"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ))}
+
+          {/* Contact */}
+          <div className="flex flex-col gap-sm">
+            <h3 className="text-small font-semibold text-neutral-white">
+              Contact
+            </h3>
+
+            <div className="flex items-start gap-xs">
+              <Icon
+                name="location"
+                size="sm"
+                className="text-neutral-white"
+              />
+
+              <p className="text-small text-neutral-white/80">
+                {footerContact.address}
+              </p>
+            </div>
+
+            <div className="flex items-start gap-xs">
+              <Icon
+                name="email"
+                size="sm"
+                className="text-neutral-white"
+              />
+
+              <a
+                href={`mailto:${footerContact.email}`}
+                className="text-small text-neutral-white/80"
+              >
+                {footerContact.email}
+              </a>
+            </div>
+
+            <div className="flex items-start gap-xs">
+              <Icon
+                name="phone"
+                size="sm"
+                className="text-neutral-white"
+              />
+
+              <a
+                href={`tel:${footerContact.phone}`}
+                className="text-small text-neutral-white/80"
+              >
+                {footerContact.phone}
+              </a>
+            </div>
+          </div>
+
         </div>
-      </Grid>
-    </Section>
+      </Container>
+    </footer>
   );
 }

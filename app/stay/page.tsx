@@ -1,11 +1,15 @@
+import Grid from "@/components/layout/Grid";
+import Section from "@/components/layout/Section";
+import Card from "@/components/ui/Card";
 import { properties } from "@/data/properties";
 
 export default function StayPage() {
   return (
-    <div>
+    <Section as="section">
+      <Grid cols={2}>
       {properties.map((property) => (
-        <div key={property.slug}>
-          <h2>{property.name}</h2>
+        <Card key={property.slug}>
+          <h2 className="text-h3">{property.name}</h2>
           <p>Type: {property.type}</p>
           <p>Availability: {property.availability}</p>
           <p>Beds: {property.beds}</p>
@@ -26,8 +30,9 @@ export default function StayPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Card>
       ))}
-    </div>
+      </Grid>
+    </Section>
   );
 }

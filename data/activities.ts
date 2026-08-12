@@ -8,13 +8,25 @@ export const activities: Activity[] = [
 
     tagline: "Trails near Mt. Rainier",
 
-    photo: "kuma-tako-ranch/activities/hiking",
+    photo: "https://res.cloudinary.com/djjqsmlei/image/upload/v1786568333/Kuma%20Tako%20Ranch/Things%20To%20Do/Hiker-on-a-trail-at-Paradise-Mount-Rainier-in-fall_g7rsd5.jpg",
 
     style: "overlay",
 
     icon: "mountain",
   },
+  {
+    slug: "food",
 
+    name: "Food & Drink",
+
+    tagline: "Restaurants, coffee & local favourites",
+
+    photo: "kuma-tako-ranch/activities/food",
+
+    style: "icon",
+
+    icon: "kitchen",
+  },
   {
     slug: "lakes",
 
@@ -22,7 +34,7 @@ export const activities: Activity[] = [
 
     tagline: "Lakes, waterfalls & scenic spots",
 
-    photo: "kuma-tako-ranch/activities/lakes",
+    photo: "https://res.cloudinary.com/djjqsmlei/image/upload/v1786568332/Kuma%20Tako%20Ranch/Things%20To%20Do/Steve-Lagreca-DT-Reflection-Lakes-Mount-Rainier-NP-WA-USA-GEOVEA_mpsv0j.jpg",
 
     style: "standard",
 
@@ -36,52 +48,10 @@ export const activities: Activity[] = [
 
     tagline: "Lakes and rivers nearby",
 
-    photo: "kuma-tako-ranch/activities/fishing",
+    photo: "https://res.cloudinary.com/djjqsmlei/image/upload/v1786568523/Kuma%20Tako%20Ranch/Things%20To%20Do/fishing_diro9m.jpg",
 
     style: "overlay",
 
     icon: "fish",
-  },
-
-  {
-    slug: "winter",
-
-    name: "Winter Adventures",
-
-    tagline: "Skiing, snow & White Pass",
-
-    photo: "kuma-tako-ranch/activities/winter",
-
-    style: "standard",
-
-    icon: "snowflake",
-  },
-
-  {
-    slug: "food",
-
-    name: "Food & Drink",
-
-    tagline: "Restaurants, coffee & local favourites",
-
-    photo: "kuma-tako-ranch/activities/food",
-
-    style: "standard",
-
-    icon: "utensils",
-  },
-
-  {
-    slug: "local",
-
-    name: "Local Experiences",
-
-    tagline: "Art, history, wildlife & more",
-
-    photo: "kuma-tako-ranch/activities/local",
-
-    style: "icon",
-
-    icon: "compass",
   },
 ];

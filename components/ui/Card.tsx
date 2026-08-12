@@ -23,7 +23,7 @@ export default function Card({
 }: CardProps) {
   return (
     <div
-      className={`bg-neutral-white rounded-lg shadow-sm overflow-hidden  ${className}`}
+      className={`bg-neutral-white rounded-lg shadow-sm overflow-hidden flex flex-col ${className}`}
     >
       {imagePublicId && (
         <div className={`relative w-full ${imageHeightMap[imageHeight]}`}>
@@ -36,7 +36,9 @@ export default function Card({
         </div>
       )}
 
-      <div className="p-md flex flex-col gap-sm">{children}</div>
+      <div className="p-md flex flex-col gap-sm flex-1">
+        {children}
+      </div>
     </div>
   );
 }

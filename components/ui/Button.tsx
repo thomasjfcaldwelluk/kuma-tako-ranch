@@ -1,5 +1,5 @@
 type ButtonProps = {
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "invert";
   size?: "sm" | "md" | "lg";
   href?: string;
   className?: string;
@@ -11,6 +11,8 @@ const variantStyles = {
   secondary: "bg-primary-cedar text-neutral-white hover:bg-primary-dark-cedar",
   outline: "bg-transparent text-primary-green border border-primary-green hover:bg-primary-sage/10",
   ghost: "bg-transparent text-primary-green hover:bg-primary-sage/10",
+  invert:"bg-neutral-white text-primary-green hover:bg-neutral-cream"
+
 };
 
 const sizeStyles = {

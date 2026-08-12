@@ -17,13 +17,18 @@ export default function PropertyCard({
 }: Property) {
   return (
     <Card imagePublicId={photos[0]} imageAlt={name}>
-      <Badge style={availability === "available" ? "success" : "warning"}>
-        {availability === "available" ? "Available Now" : "Limited Availability"}
-      </Badge>
 
+      <div className="self-start">
+        <Badge
+          style={availability === "available" ? "success" : "warning"}
+        >
+          {availability === "available"
+            ? "Available Now"
+            : "Limited Availability"}
+        </Badge>
+      </div>
       <h3 className="text-h3">{name}</h3>
-
-      <div className="flex gap-md text-small text-text-secondary">
+      <div className="flex gap-sm text-small text-text-secondary">
         {beds > 0 && (
           <span className="flex items-center gap-xs">
             <Icon name="bed" size="sm" />
@@ -34,17 +39,23 @@ export default function PropertyCard({
           <Icon name="guests" size="sm" />
           {guests} Guests
         </span>
-        <span className="flex items-center gap-xs">
-          <Icon name="wifi" size="sm" />
-          Wifi
-        </span>
       </div>
 
-      <p className="text-small text-text-secondary">{description}</p>
+      <p className="text-caption text-text-secondary">
+        {description}
+      </p>
 
-      <Button href={`/stay/${slug}`} variant="primary" size="sm" className="w-full">
-        Book Now
-      </Button>
+      <div className="mt-auto">
+        <Button
+          href={`/stay/${slug}`}
+          variant="primary"
+          size="md"
+          className="w-full"
+        >
+          Book Now
+        </Button>
+      </div>
+
     </Card>
   );
 }

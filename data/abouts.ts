@@ -22,7 +22,7 @@ export const aboutContent: About = {
       description: "Enjoy the mountains and scenery all day",
     },
     {
-      icon: "paw",
+      icon: "droplet",
       title: "Wildlife",
       description: "Spot all types of wildlife during your stay",
     },

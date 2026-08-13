@@ -1,5 +1,7 @@
+import type { IconName } from "@/lib/icons";
+
 export type ValuePoint = {
-  icon: string;
+  icon: IconName;
   title: string;
   description: string;
 };

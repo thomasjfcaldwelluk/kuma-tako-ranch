@@ -5,7 +5,6 @@ import Section from "../layout/Section";
 import Header from "../ui/Heading";
 import Icon from "../ui/Icon";
 import { activities } from "@/data/activities";
-import { IconName } from "@/lib/icons";
 
 export default function ThingsToDo() {
   const [hiking, foodAndDrink, lakes, fishing] = activities;
@@ -36,7 +35,11 @@ function ActivityTile({
       <div
         className={`relative h-[300px] md:h-auto bg-neutral-cream flex flex-col items-center justify-center text-center gap-xs p-md ${className}`}
       >
-        <Icon name={activity.icon as IconName} size="lg" className="text-primary-sage" />
+       <Icon
+            name={activity.icon}
+            size="lg"
+            className="text-primary-sage"
+            />
         <h3 className="text-h3">{activity.name}</h3>
         <p className="text-small text-text-secondary">{activity.tagline}</p>
       </div>

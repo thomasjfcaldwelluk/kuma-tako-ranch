@@ -19,7 +19,11 @@ import {
   Star,
   Trees,
   Menu, 
-  X
+  X,
+  Droplet,
+  Phone,
+  Mail,
+  MapPinHouse
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -36,6 +40,9 @@ export const iconMap = {
   bed: Bed,
   bath: Bath,
   tv: Tv,
+  phone:Phone,
+  mail:Mail,
+  "map-pin-house":MapPinHouse,
   "washing-machine": WashingMachine,
   "chevron-down": ChevronDown,
   home: Home,
@@ -48,6 +55,7 @@ export const iconMap = {
   trees: Trees,
   menu: Menu,
   x: X,
+  "droplet":Droplet,
   facebook: FaFacebookF,
   instagram: FaInstagram
 };

@@ -8,31 +8,43 @@ import { Property } from "@/types/property";
  */
 const rvSiteDefaults = {
   type: "rv-site" as const,
-
   availability: "available" as const,
-
   guests: 6,
   beds: 0,
   bathrooms: 0,
-
-  description:
-    "A peaceful RV site close to Mount Rainier, set among the trees with easy access to the surrounding ranch grounds.",
-
-  amenities: [
-    "fire-pit",
-    "pets",
-    "water-hookup",
-    "electric-hookup",
-    "full-hookups",
-    "flat-site",
-    "gravel",
-    "trash-bins",
-  ],
-
+  description:  "A peaceful RV site close to Mount Rainier, set among the trees with easy access to the surrounding ranch grounds.",
+amenities: [
+  {
+    name: "WiFi",
+    icon: "wifi",
+  },
+  {
+    name: "Free Parking",
+    icon: "free-parking",
+  },
+  {
+    name: "Pet Friendly",
+    icon: "pet-friendly",
+  },
+  {
+    name: "Fire Pit",
+    icon: "fire-pit",
+  },
+    {
+    name:"Water Hook Up",
+    icon:"droplet",
+  },
+    {
+    name:"Electric Hook Up",
+    icon:"droplet",
+  },
+    {
+    name:"Trash Bins",
+    icon:"droplet",
+  },
+],
   photos: ['https://res.cloudinary.com/djjqsmlei/image/upload/v1786555048/Kuma%20Tako%20Ranch/RV/AnimalTracks.jpg'],
-
   hospitableWidgetId: "",
-
   rigSuitability: {
     maxLength: "65 feet",
     siteType: "Back-in",
@@ -78,21 +90,13 @@ const rvSiteDefaults = {
   bookingDetails: {
     checkIn: "2:00 PM - 10:00 PM",
     checkOut: "Before 12:00 PM",
-
     arrivalInstructions: "Head straight to your site.",
-
     cancellationPolicy: "Strict",
-
     minimumNights: 1,
-
     bookingWindow: "12 months out",
-
     maxVehicles: 1,
-
     parkingAtListing: true,
-
     wheelchairAccessible: false,
-
     twoWheelDriveAccessible: true,
   },
 
@@ -170,7 +174,7 @@ export const properties: Property[] = [
 
     name: "Kuma Tako Ranch",
 
-    type: "house",
+    type: "House",
 
     availability: "available",
 
@@ -203,29 +207,64 @@ export const properties: Property[] = [
     },
 
     amenities: [
-      "waterfront",
-      "wifi",
-      "dedicated-workspace",
-      "free-parking",
-      "hot-tub",
-      "pets",
-      "tv",
-      "washing-machine",
-      "dryer",
-      "air-conditioning",
-      "fireplace",
-      "pool-table",
-      "gym",
-      "playground",
-      "fire-pit",
-      "bbq",
-      "outdoor-dining",
-      "private-entrance",
-      "self-check-in",
-      "smart-lock",
-    ],
-
-    photos: [
+  {
+    name: "WiFi",
+    icon: "wifi",
+  },
+  {
+    name: "Free Parking",
+    icon: "free-parking",
+  },
+  {
+    name: "Pet Friendly",
+    icon: "pet-friendly",
+  },
+  {
+    name: "Fire Pit",
+    icon: "fire-pit",
+  },
+   {
+    name:"Hot Tub",
+    icon:"droplet",
+  },
+   {
+    name:"TV",
+    icon:"tv",
+  },
+   {
+    name:"Washing Machine",
+    icon:"washing-machine",
+  },
+   {
+    name:"Dryer",
+    icon:"washing-machine",
+  },
+   {
+    name:"Air Condition",
+    icon:"air-conditioning",
+  },
+   {
+    name:"Fireplace",
+    icon:"fire-pit",
+  },
+   {
+    name:"Pool Table",
+    icon:"droplet",
+  },
+   {
+    name:"Gym",
+    icon:"droplet",
+  },
+   {
+    name:"BBQ",
+    icon:"droplet",
+  },
+   {
+    name:"Self Check In",
+    icon:"droplet",
+  }
+],
+ photos: [
       "https://res.cloudinary.com/djjqsmlei/image/upload/v1786031077/Kuma%20Tako%20Ranch/House%20Images/Outside/1-7_p5fm6x.jpg",
       "kuma-tako-ranch/ranch-house/living-room",
       "kuma-tako-ranch/ranch-house/kitchen",

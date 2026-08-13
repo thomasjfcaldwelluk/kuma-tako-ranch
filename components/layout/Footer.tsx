@@ -80,9 +80,9 @@ export default function Footer() {
 
             <div className="flex items-start gap-xs">
               <Icon
-                name="location"
+                name="map-pin-house"
                 size="sm"
-                className="text-neutral-white"
+                className="text-neutral-white mt-0"
               />
 
               <p className="text-small text-neutral-white/80">
@@ -92,14 +92,14 @@ export default function Footer() {
 
             <div className="flex items-start gap-xs">
               <Icon
-                name="email"
+                name="mail"
                 size="sm"
-                className="text-neutral-white"
+                className="text-neutral-white mt-0"
               />
 
               <a
                 href={`mailto:${footerContact.email}`}
-                className="text-small text-neutral-white/80"
+                className="text-caption text-neutral-white/80"
               >
                 {footerContact.email}
               </a>

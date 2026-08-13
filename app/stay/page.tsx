@@ -1,12 +1,13 @@
 import Grid from "@/components/layout/Grid";
 import Section from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
+import Badge from "@/components/ui/Badge";
 import { properties } from "@/data/properties";
 
 export default function StayPage() {
   return (
     <Section as="section" spacing="lg">
-      <Grid cols={2}>
+      <Grid cols={3} gap="xl" spacing="lg">
       {properties.map((property) => (
         <Card key={property.slug}>
           <h2 className="text-h3">{property.name}</h2>
@@ -16,18 +17,18 @@ export default function StayPage() {
           <p>Guests: {property.guests}</p>
           <p>Bathrooms: {property.bathrooms}</p>
           <p>Description: {property.description}</p>
-          <ul>
-            {property.amenities.map((amenity, index) => (
-              <li key={index}>{amenity}</li>
+          <div className="flex flex-wrap gap-sm">
+            {property.amenities.map((amenity) => (
+            <Badge key={amenity.name} icon={amenity.icon}>
+            {amenity.name}</Badge>
             ))}
-          </ul>
-         
+          </div>
           <div>
             {property.faqs.map((faq, index) => (
-              <div key={index}>
-                <strong>{faq.question}</strong>
+              <details key={index}>
+                <summary>{faq.question}</summary>
                 <p>{faq.answer}</p>
-              </div>
+              </details>
             ))}
           </div>
         </Card>

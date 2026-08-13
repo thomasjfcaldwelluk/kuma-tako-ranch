@@ -1,4 +1,7 @@
 import { Property } from "@/types/property";
+import Badge from "../ui/Badge";
+import { properties } from "@/data/properties";
+import Section from "../layout/Section";
 
 export default function AccommodationTemplate({
   name,
@@ -13,7 +16,7 @@ export default function AccommodationTemplate({
   faqs,
 }: Property) {
   return (
-    <div>
+    <Section>
         <h1>{name}</h1>     
         <p>{description}</p>
         <p>Availability: {availability}</p>
@@ -21,11 +24,12 @@ export default function AccommodationTemplate({
         <p>Guests: {guests}</p>
         <p>Bathrooms: {bathrooms}</p>
         <h2>Amenities</h2>
-        <ul>
-          {amenities.map((amenity, index) => (
-            <li key={index}>{amenity}</li>
-          ))}
-        </ul>
+       <div className="flex flex-wrap gap-sm">
+                   {amenities.map((amenity) => (
+                   <Badge key={amenity.name} icon={amenity.icon}>
+                   {amenity.name}</Badge>
+                   ))}
+                 </div>
         <h2>Photos</h2>
         {faqs.map((faq, index) => (
           <div key={index}>
@@ -33,7 +37,7 @@ export default function AccommodationTemplate({
             <p>{faq.answer}</p>
           </div>
         ))}
-    </div>
+    </Section>
   );
 }
     

@@ -1,4 +1,11 @@
-export type PropertyType = "house" | "rv-site";
+import type { IconName } from "@/lib/icons";
+
+export type Amenity = {
+  name: string;
+  icon: IconName;
+};
+
+export type PropertyType = "House" | "RV-Site";
 
 export type PropertyAvailability = "available" | "limited";
 
@@ -15,10 +22,10 @@ export type Property = {
 
   description: string;
 
-  amenities: string[];
+  amenities: Amenity[];
 
   photos: string[];
-
+  
   hospitableWidgetId: string;
 
   faqs: {

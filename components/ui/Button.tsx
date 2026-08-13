@@ -2,6 +2,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary" | "outline" | "ghost" | "invert";
   size?: "sm" | "md" | "lg";
   href?: string;
+  onClick?: () => void;
   className?: string;
   children: React.ReactNode;
 };
@@ -11,8 +12,7 @@ const variantStyles = {
   secondary: "bg-primary-cedar text-neutral-white hover:bg-primary-dark-cedar",
   outline: "bg-transparent text-primary-green border border-primary-green hover:bg-primary-sage/10",
   ghost: "bg-transparent text-primary-green hover:bg-primary-sage/10",
-  invert:"bg-neutral-white text-primary-green hover:bg-neutral-cream"
-
+  invert: "bg-neutral-white text-primary-green hover:bg-neutral-cream"
 };
 
 const sizeStyles = {
@@ -25,6 +25,7 @@ export default function Button({
   variant = "primary",
   size = "md",
   href,
+  onClick,
   className = "",
   children,
 }: ButtonProps) {
@@ -35,11 +36,15 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} onClick={onClick} className={classes}>
         {children}
       </a>
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button onClick={onClick} className={classes}>
+      {children}
+    </button>
+  );
 }

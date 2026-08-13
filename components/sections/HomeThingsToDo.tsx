@@ -11,7 +11,7 @@ export default function ThingsToDo() {
   const [hiking, foodAndDrink, lakes, fishing] = activities;
 
   return (
-    <Section spacing="lg" bgColor="neutral">
+    <Section spacing="none" bgColor="neutral">
       <Header title="Things To Do Nearby" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-0 md:h-[600px] rounded-xs overflow-hidden">

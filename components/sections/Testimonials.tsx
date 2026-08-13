@@ -7,7 +7,7 @@ import Icon from "../ui/Icon";
 
 export default function Testimonials() {
   return (
-    <Section as="section" height="auto" spacing="xl">
+    <Section as="section" height="auto" spacing="none">
       <Header title="What Our Guests Say" />
 
       <Grid cols={3} gap="md" spacing="xl">

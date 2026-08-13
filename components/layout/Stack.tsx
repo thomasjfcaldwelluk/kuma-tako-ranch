@@ -24,9 +24,9 @@ const gapMap = {
   xl: "gap-xl",
 };
 
-export default function Stack({ direction = "col", gap = "xs", children }: StackProps) {
+export default function Stack({ direction = "col", gap = "xs", align='center',children }: StackProps) {
   return (
-    <div className={`flex ${directionMap[direction]} ${gapMap[gap]} ${alignMap["start"]}`}>
+    <div className={`flex ${directionMap[direction]} ${gapMap[gap]} ${alignMap[align]}`}>
       {children}
     </div>
   );

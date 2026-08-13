@@ -5,12 +5,12 @@ import { properties } from "@/data/properties";
 
 export default function StayPage() {
   return (
-    <Section as="section">
+    <Section as="section" spacing="lg">
       <Grid cols={2}>
       {properties.map((property) => (
         <Card key={property.slug}>
           <h2 className="text-h3">{property.name}</h2>
-          <p>Type: {property.type}</p>
+          <p className="text-body">Type: {property.type}</p>
           <p>Availability: {property.availability}</p>
           <p>Beds: {property.beds}</p>
           <p>Guests: {property.guests}</p>

@@ -1,5 +1,6 @@
+"use client"
 import Link from "next/link";
-
+import { CldImage } from "next-cloudinary";
 import Container from "./Container";
 import Icon from "../ui/Icon";
 
@@ -15,13 +16,19 @@ export default function Footer() {
     <footer className="bg-primary-dark-green p-2xl">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-lg">
-
           {/* Branding */}
-          <div className="flex flex-col gap-sm">
+          <div className="flex flex-col gap-xs">
+            <div className="flex flex-row gap-sm">
+            <CldImage
+              src="Kuma Tako Ranch/Logo/Logo.White"
+              alt="Kuma Tako Ranch"
+              width={36}
+              height={36}
+            />
             <h2 className="text-h3 text-neutral-white">
               Kuma Tako Ranch
             </h2>
-
+            </div>
             <p className="text-small text-neutral-white/80">
               {footerTagline}
             </p>

@@ -8,20 +8,14 @@ type GalleryGridProps = {
   images: GalleryImage[];
 };
 
-const spanMap = {
-  normal: "",
-  wide: "sm:col-span-2",
-  tall: "sm:row-span-2",
-};
-
 export default function GalleryGrid({ images }: GalleryGridProps) {
-  const [featured, ...rest] = images;
+  const [featured, kitchen, livingRoom, tall, bedroom, wide] = images;
 
   return (
-    <Section as="section">
-      <div className="flex flex-col gap-sm">
+    <Section as="section" spacing="none">
+      <div className="flex flex-col gap-sm px-lg py-xl" >
         {/* Featured image - full width, landscape banner */}
-        <div className="relative w-full h-[220px] sm:h-[380px] rounded-lg overflow-hidden">
+        <div className="relative w-full h-[220px] sm:h-[380px] rounded-sm overflow-hidden">
           <CldImage
             src={featured.publicId}
             alt={featured.alt}
@@ -29,24 +23,24 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
             className="object-cover"
           />
         </div>
-
-        {/* Grid of remaining tiles - short rows */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 auto-rows-[400px] sm:auto-rows-[200px] gap-sm">
-          {rest.map((image) => (
-            <div
-              key={image.publicId}
-              className={`relative rounded-md overflow-hidden ${spanMap[image.span ?? "normal"]}`}
-            >
-              <CldImage
-                src={image.publicId}
-                alt={image.alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
+        {/* Grid - explicit placement, matches reference layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-2 gap-sm sm:h-[420px]">
+          <Tile image={kitchen} className="sm:col-start-1 sm:row-start-1" />
+          <Tile image={livingRoom} className="sm:col-start-2 sm:row-start-1" />
+          <Tile image={tall} className="sm:col-start-3 sm:row-start-1 sm:row-span-2" />
+          <Tile image={bedroom} className="sm:col-start-4 sm:row-start-1" />
+          <Tile image={wide} className="sm:col-start-1 sm:row-start-2 sm:col-span-2" />
+           <Tile image={livingRoom} className="sm:col-start-4 sm:row-start-2" />
         </div>
       </div>
     </Section>
+  );
+}
+
+function Tile({ image, className = "" }: { image: GalleryImage; className?: string }) {
+  return (
+    <div className={`relative rounded-md overflow-hidden h-[160px] sm:h-auto ${className}`}>
+      <CldImage src={image.publicId} alt={image.alt} fill className="object-cover" />
+    </div>
   );
 }

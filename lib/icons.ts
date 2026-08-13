@@ -17,8 +17,14 @@ import {
   MapPin,
   Calendar,
   Star,
-  Trees
+  Trees,
+  Menu, 
+  X
 } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+} from "react-icons/fa";
 
 export const iconMap = {
   wifi: Wifi,
@@ -39,7 +45,11 @@ export const iconMap = {
   "map-pin": MapPin,
   calendar: Calendar,
   star: Star,
-  trees: Trees
+  trees: Trees,
+  menu: Menu,
+  x: X,
+  facebook: FaFacebookF,
+  instagram: FaInstagram
 };
 
 export type IconName = keyof typeof iconMap;

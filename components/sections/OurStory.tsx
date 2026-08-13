@@ -21,7 +21,7 @@ export default function OurStory({
   alt,
 }: OurStoryProps) {
   return (
-    <Section as="section" spacing="lg" height="auto">
+    <Section as="section" height="auto">
       <Header title="Our Story" />
       <Grid cols={2} gap="none">
         <div className="flex flex-col justify-center gap-xl p-10 bg-neutral-cream">

@@ -41,7 +41,10 @@ export default function Home() {
       <HomeGallery images={homeGallery}/>
       <Testimonials/>
       <Cta/>
-      <HomeContact/>
+      <HomeContact  
+        imagePublicId="Kuma Tako Ranch/House Images/Outside/contact"
+        alt="image of house at night"
+        />
     </main>
   );
 }

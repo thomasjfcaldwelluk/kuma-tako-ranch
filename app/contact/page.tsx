@@ -1,8 +1,10 @@
+import HomeContact from "@/components/sections/HomeContact";
+
 export default function Contact() {
   return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>This is the contact page of the Kuma Tako Ranch website.</p>
-    </div>
+    <main>
+      <HomeContact imagePublicId="Kuma Tako Ranch/House Images/Outside/contact"
+        alt="image of house at night" />
+    </main>
   );
 }

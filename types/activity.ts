@@ -12,6 +12,7 @@ type PhotoActivity = {
   tagline: string;
   photo: string;
   style: "overlay" | "standard";
+  icon?: IconName;
 };
 
 

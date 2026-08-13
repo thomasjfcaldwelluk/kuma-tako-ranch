@@ -5,7 +5,7 @@ export type Amenity = {
   icon: IconName;
 };
 
-export type PropertyType = "House" | "RV-Site";
+export type PropertyType = "house" | "rv-site";
 
 export type PropertyAvailability = "available" | "limited";
 

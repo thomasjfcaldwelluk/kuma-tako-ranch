@@ -12,7 +12,6 @@ export default function ThingsToDo() {
   return (
     <Section spacing="none" bgColor="neutral">
       <Header title="Things To Do Nearby" />
-
       <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-0 md:h-[600px] rounded-xs overflow-hidden">
         <ActivityTile activity={hiking} className="md:col-start-1 md:row-start-1 md:row-span-2" />
         <ActivityTile activity={foodAndDrink} className="md:col-start-2 md:row-start-1" />

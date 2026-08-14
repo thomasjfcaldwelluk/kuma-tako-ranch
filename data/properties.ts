@@ -174,7 +174,7 @@ export const properties: Property[] = [
 
     name: "Kuma Tako Ranch",
 
-    type: "House",
+    type: "house",
 
     availability: "available",
 

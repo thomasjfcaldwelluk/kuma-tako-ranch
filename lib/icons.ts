@@ -23,7 +23,9 @@ import {
   Droplet,
   Phone,
   Mail,
-  MapPinHouse
+  MapPinHouse,
+  Waves,
+Fish,
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -31,6 +33,8 @@ import {
 } from "react-icons/fa";
 
 export const iconMap = {
+  fish:Fish,
+  waves:Waves,
   wifi: Wifi,
   "fire-pit": Flame,
   "free-parking": Car,

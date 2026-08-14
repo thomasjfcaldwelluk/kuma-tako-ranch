@@ -1,4 +1,5 @@
-import { Property } from "@/types/property";
+import type { Property } from "@/types/property";
+import type { IconName } from "@/lib/icons";
 
 /**
  * Shared information for all RV sites.
@@ -162,7 +163,7 @@ amenities: [
 /**
  * Properties
  */
-export const properties: Property[] = [
+export const properties: = [
   /*
    * --------------------------------------------------
    * RANCH HOUSE
@@ -263,6 +264,7 @@ export const properties: Property[] = [
     name:"Self Check In",
     icon:"droplet",
   }
+  satisfies Property[]
 ],
  photos: [
       "https://res.cloudinary.com/djjqsmlei/image/upload/v1786031077/Kuma%20Tako%20Ranch/House%20Images/Outside/1-7_p5fm6x.jpg",

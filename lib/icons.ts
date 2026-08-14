@@ -59,7 +59,7 @@ export const iconMap = {
   trees: Trees,
   menu: Menu,
   x: X,
-  "droplet":Droplet,
+  droplet:Droplet,
   facebook: FaFacebookF,
   instagram: FaInstagram
 };

@@ -1,6 +1,5 @@
 import { Property } from "@/types/property";
 import Badge from "../ui/Badge";
-import { properties } from "@/data/properties";
 import Section from "../layout/Section";
 
 export default function AccommodationTemplate({

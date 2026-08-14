@@ -3,27 +3,32 @@ import { guideItems } from "@/data/guide";
 
 import ActivityCard from "@/components/activities/ActivityCard";
 import GuideSection from "@/components/guide/GuideSection";
+import Section from "@/components/layout/Section";
+import Grid from "@/components/layout/Grid";
 
 export default function ThingsToDoPage() {
   return (
     <main>
+      <div className="flex flex-col align-center justify-center p-xl">
       <h1>Things To Do</h1>
       <p>
         Explore the best hikes, lakes, food,
         activities and adventures near Kuma Tako Ranch.
       </p>
-      <section>
-        <h2>Explore the Area</h2>
+      </div>
+      <Section bgColor="cream" spacing="md">
+        <h2 className="text-h2 text-text-primary text-center p-md" >Explore the Area</h2>
+        <Grid cols={4} spacing="xl">
         {activities.map((activity) => (
           <ActivityCard
             key={activity.slug}
             activity={activity}
           />
         ))}
-        
-      </section>
+        </Grid>
+  
+      </Section>
      <section>
-  <h2>Recommended Adventures</h2>
   {activities.map((activity) => {
     const items = guideItems.filter(
       (item) => item.activity === activity.slug

@@ -15,11 +15,11 @@ const colsMap = {
 
 const spacingMap = {
   none:" ",
-  xs:"px-xs",
-  sm:"px-sm",
-  md:"px-md",
-  lg:"px-lg",
-  xl:"px-xl",
+  xs:"p-xs",
+  sm:"p-sm",
+  md:"p-md",
+  lg:"p-lg",
+  xl:"p-xl",
 }
 
 const gapMap = {

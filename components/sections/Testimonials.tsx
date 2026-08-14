@@ -7,13 +7,11 @@ import Icon from "../ui/Icon";
 
 export default function Testimonials() {
   return (
-    <Section as="section" height="auto" spacing="none">
+    <Section as="section" height="auto" spacing="none" className="p-xl">
       <Header title="What Our Guests Say" />
-
       <Grid cols={3} gap="md" spacing="xl">
         {testimonials.map((testimonial, index) => (
           <Card key={index} className="h-full flex flex-col">
-
             <div className="flex gap-xs">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Icon
@@ -24,16 +22,13 @@ export default function Testimonials() {
                 />
               ))}
             </div>
-
             <p className="text-caption text-text-body">{testimonial.quote}</p>
-
             <div className="mt-auto">
-              <p className="text-body text-text-primary font-weight-semibold">- {testimonial.name}</p>
+              <p className="text-body text-text-primary font-weight-bold">- {testimonial.name}</p>
               <p className="text-caption text-text-secondary">
                 {testimonial.stayDetail}
               </p>
             </div>
-
           </Card>
         ))}
       </Grid>

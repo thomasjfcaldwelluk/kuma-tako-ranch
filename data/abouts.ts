@@ -4,11 +4,11 @@ import { About } from "@/types/about";
 export const aboutContent: About = {
   title: "Our Story",
   subtitle: "Three generations, one family, one mountain",
-  description: "Lorem ipsum... (your real story text)",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. [1]",
   images: [
-    "kuma-tako-ranch/about/family",
-    "kuma-tako-ranch/about/ranch-view",
-    "kuma-tako-ranch/about/sunset",
+    "Kuma Tako Ranch/House Images/Inside/galleryKitchen",
+    "Kuma Tako Ranch/House Images/Outside/Patio",
+    "Kuma Tako Ranch/House Images/Outside/Slide",
   ],
   values: [
     {
@@ -22,7 +22,7 @@ export const aboutContent: About = {
       description: "Enjoy the mountains and scenery all day",
     },
     {
-      icon: "droplet",
+      icon: "bird",
       title: "Wildlife",
       description: "Spot all types of wildlife during your stay",
     },

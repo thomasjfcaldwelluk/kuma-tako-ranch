@@ -1,5 +1,8 @@
 import { GuideItem } from "@/types/guide";
 import GuideCard from "./GuideCard";
+import Section from "../layout/Section";
+import Grid from "../layout/Grid";
+import Header from "../ui/Heading";
 
 type GuideSectionProps = {
   title: string;
@@ -11,15 +14,13 @@ export default function GuideSection({
   items,
 }: GuideSectionProps) {
   return (
-    <section>
-      <h2>{title}</h2>
-
-      {items.map((item) => (
-        <GuideCard
-          key={item.slug}
-          item={item}
-        />
-      ))}
-    </section>
+    <Section bgColor="cream">
+      <Header title={title} />
+      <Grid cols={3} gap="md" spacing="xl">
+        {items.map((item) => (
+          <GuideCard key={item.slug} item={item} />
+        ))}
+      </Grid>
+    </Section>
   );
 }

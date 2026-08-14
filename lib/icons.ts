@@ -25,7 +25,8 @@ import {
   Mail,
   MapPinHouse,
   Waves,
-Fish,
+  Fish,
+  Bird
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -60,6 +61,7 @@ export const iconMap = {
   menu: Menu,
   x: X,
   droplet:Droplet,
+  bird:Bird,
   facebook: FaFacebookF,
   instagram: FaInstagram
 };

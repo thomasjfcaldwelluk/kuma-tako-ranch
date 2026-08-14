@@ -263,8 +263,7 @@ export const properties: Property[] = [
    {
     name:"Self Check In",
     icon:"droplet",
-  }
-  satisfies Property[]
+  },
 ],
  photos: [
       "https://res.cloudinary.com/djjqsmlei/image/upload/v1786031077/Kuma%20Tako%20Ranch/House%20Images/Outside/1-7_p5fm6x.jpg",

@@ -21,8 +21,6 @@ export const activities: Activity[] = [
 
     tagline: "Restaurants, coffee & local favourites",
 
-    photo: "kuma-tako-ranch/activities/food",
-
     style: "icon",
 
     icon: "kitchen",

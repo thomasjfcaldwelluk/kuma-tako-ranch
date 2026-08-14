@@ -7,7 +7,7 @@ import type { IconName } from "@/lib/icons";
  * If all RV sites are genuinely identical,
  * keep the common information here.
  */
-const rvSiteDefaults: Partial<Property> = {
+const rvSiteDefaults: Omit<Property, "slug" | "name" | "photos" | "hospitableWidgetId"> = {
   type: "rv-site" as const,
   availability: "available" as const,
   guests: 6,

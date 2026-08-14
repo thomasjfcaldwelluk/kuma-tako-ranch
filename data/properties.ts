@@ -44,7 +44,7 @@ amenities: [
     icon:"droplet",
   },
 ],
-  hospitableWidgetId: "",
+  // hospitableWidgetId: "",
   rigSuitability: {
     maxLength: "65 feet",
     siteType: "Back-in",

@@ -163,7 +163,7 @@ amenities: [
 /**
  * Properties
  */
-export const properties: = [
+export const properties: Property[] = [
   /*
    * --------------------------------------------------
    * RANCH HOUSE

@@ -44,7 +44,6 @@ amenities: [
     icon:"droplet",
   },
 ],
-  photos: ['https://res.cloudinary.com/djjqsmlei/image/upload/v1786555048/Kuma%20Tako%20Ranch/RV/AnimalTracks.jpg'],
   hospitableWidgetId: "",
   rigSuitability: {
     maxLength: "65 feet",

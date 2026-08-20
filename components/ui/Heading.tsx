@@ -1,6 +1,5 @@
 import Section from "../layout/Section";
 import Icon from "./Icon";
-import Stack from "../layout/Stack";
 
 type SectionHeaderProps = {
   title: string

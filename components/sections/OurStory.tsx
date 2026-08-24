@@ -24,7 +24,7 @@ export default function OurStory({
     <Section as="section" height="auto">
       <Header title="Our Story" />
       <Grid cols={2} gap="none">
-        <div className="flex flex-col justify-center gap-xl p-10 bg-neutral-cream">
+        <div className="flex flex-col justify-center gap-md p-10 bg-neutral-cream">
           <h2 className="text-caption text-center weight-800">{heading}</h2>
           <p className="text-h2 text-center">{subheading}</p>
           <p className="text-small">{description}</p>

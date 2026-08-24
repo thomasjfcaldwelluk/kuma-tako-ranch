@@ -10,7 +10,7 @@ export default function ThingsToDoPage() {
   return (
     <main>
       <div className="flex flex-col align-center justify-center p-xl">
-      <h1>Things To Do</h1>
+      <h1 className="text-center text-h2">Things To Do</h1>
       <p>
         Explore the best hikes, lakes, food,
         activities and adventures near Kuma Tako Ranch.

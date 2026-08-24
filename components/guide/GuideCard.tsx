@@ -1,8 +1,18 @@
-import { GuideItem } from "@/types/guide";
-import Card from "@/components/ui/Card"
+import type { GuideItem, Difficulty } from "@/types/guide";
+import Card from "@/components/ui/Card";
+import Button from "../ui/Button";
+import Badge from "../ui/Badge";
 
 type GuideCardProps = {
   item: GuideItem;
+};
+
+export const difficultyStyles: Record<Difficulty, string> = {
+  Hard: "text-status-error",
+  "Moderate–Hard": "text-status-error",
+  Moderate: "text-primary-sage",
+  "Easy–Moderate": "text-status-success",
+  Easy: "text-status-success",
 };
 
 export default function GuideCard({
@@ -10,35 +20,36 @@ export default function GuideCard({
 }: GuideCardProps) {
   return (
     <Card>
-      <h3 className="text-h3 text-text-primary">{item.name}</h3>
-      <p>{item.description}</p>
-      <p>
+      <h3 className="text-h3 text-text-primary">
+        {item.name}
+      </h3>
+
+      <p className="text-small text-text-secondary">{item.description}</p>
+
+      <p className="text-body text-text-primary font-semibold">
         Location: {item.location}
       </p>
 
       {item.difficulty && (
-        <p>
+        <p className={`text-body ${difficultyStyles[item.difficulty]}`}>
           Difficulty: {item.difficulty}
         </p>
       )}
 
       {item.dogsAllowed !== undefined && (
-        <p>
-          Dogs:{" "}
-          {item.dogsAllowed
-            ? "Allowed"
-            : "Not allowed"}
-        </p>
+        <Badge style={item.dogsAllowed === true ? "success" : "warning"}>
+          Dogs: {item.dogsAllowed ? "Allowed" : "Not allowed"}
+        </Badge>
       )}
 
       {item.website && (
-        <a
+        <Button variant="outline" className="mt-auto"
           href={item.website}
-          target="_blank"
-          rel="noopener noreferrer"
+          // target="_blank"
+          // rel="noopener noreferrer"
         >
           More information
-        </a>
+        </Button>
       )}
     </Card>
   );

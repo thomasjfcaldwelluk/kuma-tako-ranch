@@ -6,6 +6,13 @@ export type GuideActivity =
   | "food"
   | "local";
 
+export type Difficulty =
+  | "Hard"
+  | "Moderate–Hard"
+  | "Moderate"
+  | "Easy–Moderate"
+  | "Easy";
+
 export type GuideItem = {
   slug: string;
 
@@ -21,7 +28,7 @@ export type GuideItem = {
 
   distanceFromRanch?: string;
 
-  difficulty?: string;
+  difficulty?: Difficulty;
 
   dogsAllowed?: boolean;
 

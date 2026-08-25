@@ -5,6 +5,7 @@ import Stack from "@/components/layout/Stack";
 import Icon from "@/components/ui/Icon";
 import Card from "@/components/ui/Card";
 import Grid from "@/components/layout/Grid";
+import Header from "@/components/ui/Heading";
 
 
 
@@ -12,9 +13,10 @@ export default function About() {
   return (
     <main className="gap-xl p-lg">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="text-h1 text-align-center">{aboutContent.title}</h2>
-        <p>{aboutContent.subtitle}</p>
-        <div className="max-w-[1000px] min-w-[320px] mx-auto my-lg ">
+        {/* <h2 className="text-h1 text-align-center">{aboutContent.title}</h2> */}
+        <Header title={aboutContent.title}/>
+        <p className="text-h2 text-text-primary">{aboutContent.subtitle}</p>
+        <div className="max-w-[1200px] min-w-[320px] mx-auto my-lg ">
           <p className="text-small text-text-secondary">{aboutContent.description}</p>
         </div>
       </div>
@@ -29,9 +31,9 @@ export default function About() {
         </Card>
       ))}
       </Grid>
-      <Grid cols={3} spacing="xl">
+      <Grid cols={3} spacing="md">
      {aboutContent.images.map((image, index) => (
-        <div key={index} className="relative h-[300px] rounded-sm overflow-hidden mt-xl">
+        <div key={index} className="relative h-[300px] rounded-sm overflow-hidden mt-md">
           <CldImage
               src={image}
               alt={`Photo ${index + 1}`}

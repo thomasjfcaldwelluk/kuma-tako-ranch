@@ -2,18 +2,24 @@ import Grid from "@/components/layout/Grid";
 import Section from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import { properties } from "@/data/properties";
 import FAQItem from "@/components/ui/FAQItem";
+import Icon from "@/components/ui/Icon";
+import Header from "@/components/ui/Heading";
 
 
 export default function StayPage() {
   return (
     <Section as="section" spacing="lg">
-      <Grid cols={3} gap="xl" spacing="lg">
+      <Header title="Accommodation Options" />
+      <Grid cols={2} gap="xl" spacing="lg">
       {properties.map((property) => (
-        <Card key={property.slug}>
-          <h2 className="text-h3">{property.name}</h2>
-      <p className={`text-body capitalize ${ property.type === "house" ? "text-text-primary" : "text-text-secondary" }`}> {property.type}</p>
+        <Card key={property.slug} variant="secondary">
+          <div className="flex space-between gap-sm align-center">
+              <h2 className="text-h3">{property.name}:</h2>
+              <p className={`text-h3 capitalize  ${ property.type === "house" ? "text-primary-green" : "text-primary-cedar" }`}> {property.type}</p>
+          </div>
           <div className="self-start">
                   <Badge
                     style={property.availability === "available" ? "success" : "warning"}
@@ -23,9 +29,26 @@ export default function StayPage() {
                       : "Limited Availability"}
                   </Badge>
                 </div>
-          <p>Beds: {property.beds}</p>
-          <p>Guests: {property.guests}</p>
-          <p>Bathrooms: {property.bathrooms}</p>
+                <div className="flex gap-sm my-2">
+                          {property.guests > 0 && (
+                          <span className="flex items-center gap-xs">
+                            <Icon name="guests" size="sm" />
+                            {property.guests} guests
+                          </span>
+                        )}
+                          {property.beds > 0 && (
+                          <span className="flex items-center gap-xs">
+                            <Icon name="bed" size="sm" />
+                            {property.beds} Beds
+                          </span>
+                        )}
+                        {property.bathrooms > 0 && (
+                          <span className="flex items-center gap-xs">
+                            <Icon name="bath" size="sm" />
+                            {property.bathrooms} Bathrooms
+                          </span>
+                        )}
+                      </div>
           <p className="text-small text-text-secondary">{property.description}</p>
           <div className="flex flex-wrap gap-sm">
             {property.amenities.map((amenity) => (
@@ -33,11 +56,21 @@ export default function StayPage() {
             {amenity.name}</Badge>
             ))}
           </div>
-          <div>
+          <div className="my-5">
             {property.faqs.map((faq, index) => (
                <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
           </div>
+          <div className="mt-auto">
+                  <Button
+                    variant={`${property.slug==='ranch-house' ? 'primary' : 'secondary'}`}
+                    href={`/stay/${property.slug}`}
+                    size="md"
+                    className="w-full"
+                  >
+                    Book Now
+                  </Button>
+                </div>
         </Card>
       ))}
       </Grid>

@@ -1,12 +1,18 @@
 import { CldImage } from "next-cloudinary";
 
 type CardProps = {
+  variant?:"primary"|"secondary";
   imagePublicId?: string;
   imageAlt?: string;
   imageHeight?: "sm" | "md" | "lg";
   children: React.ReactNode;
   className?: string;
 };
+
+const variantStyles = {
+  primary:"bg-neutral-white",
+  secondary:"bg-neutral-cream"
+}
 
 const imageHeightMap = {
   sm: "h-40",
@@ -15,6 +21,7 @@ const imageHeightMap = {
 };
 
 export default function Card({
+  variant ="primary",
   imagePublicId,
   imageAlt = "",
   imageHeight = "md",
@@ -23,7 +30,7 @@ export default function Card({
 }: CardProps) {
   return (
     <div
-      className={`bg-neutral-white rounded-lg shadow-sm overflow-hidden flex flex-col ${className}`}
+      className={`rounded-lg shadow-sm overflow-hidden flex flex-col ${variantStyles[variant]} ${className}`}
     >
       {imagePublicId && (
         <div className={`relative w-full ${imageHeightMap[imageHeight]}`}>

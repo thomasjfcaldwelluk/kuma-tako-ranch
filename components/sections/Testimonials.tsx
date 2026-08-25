@@ -11,7 +11,7 @@ export default function Testimonials() {
       <Header title="What Our Guests Say" />
       <Grid cols={3} gap="md" spacing="md">
         {testimonials.map((testimonial, index) => (
-          <Card key={index} className="h-full flex flex-col">
+          <Card key={index} className="h-full flex flex-col" variant="secondary">
             <div className="flex gap-xs">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Icon

@@ -47,8 +47,8 @@ export default function PropertyCard({
 
       <div className="mt-auto">
         <Button
+          variant={`${slug==='ranch-house' ? 'primary' : 'secondary'}`}
           href={`/stay/${slug}`}
-          variant="primary"
           size="md"
           className="w-full"
         >

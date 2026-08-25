@@ -26,7 +26,7 @@ export default function StayPage() {
           <p>Beds: {property.beds}</p>
           <p>Guests: {property.guests}</p>
           <p>Bathrooms: {property.bathrooms}</p>
-          <p>{property.description}</p>
+          <p className="text-small text-text-secondary">{property.description}</p>
           <div className="flex flex-wrap gap-sm">
             {property.amenities.map((amenity) => (
             <Badge key={amenity.name} icon={amenity.icon}>

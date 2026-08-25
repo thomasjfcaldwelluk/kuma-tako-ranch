@@ -7,9 +7,9 @@ import Icon from "../ui/Icon";
 
 export default function Testimonials() {
   return (
-    <Section as="section" height="auto" spacing="none" className="p-xl">
+    <Section as="section" height="auto" spacing="none">
       <Header title="What Our Guests Say" />
-      <Grid cols={3} gap="md" spacing="xl">
+      <Grid cols={3} gap="md" spacing="md">
         {testimonials.map((testimonial, index) => (
           <Card key={index} className="h-full flex flex-col">
             <div className="flex gap-xs">

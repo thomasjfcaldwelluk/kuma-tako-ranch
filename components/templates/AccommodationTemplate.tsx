@@ -2,6 +2,9 @@ import { Property } from "@/types/property";
 import Badge from "../ui/Badge";
 import Section from "../layout/Section";
 import FAQItem from "../ui/FAQItem";
+import Grid from "../layout/Grid";
+import Header from "../ui/Heading";
+import Card from "../ui/Card";
 
 export default function AccommodationTemplate({
   name,
@@ -17,7 +20,11 @@ export default function AccommodationTemplate({
 }: Property) {
   return (
     <Section>
-        <h1>{name}</h1>     
+      <Grid cols={2}>
+        <div>
+        <Header title={name}/>   
+        <Card>
+
         <p>{description}</p>
         <div className="self-start">
           <Badge style={availability === "available" ? "success" : "warning"}>
@@ -38,6 +45,14 @@ export default function AccommodationTemplate({
         {faqs.map((faq) => (
                  <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
                    ))}
+        </Card>
+
+        </div>
+        <div>
+          <p>widget does here</p>
+        </div>
+
+      </Grid>
     </Section>
   );
 }

@@ -9,9 +9,9 @@ export default function Testimonials() {
   return (
     <Section as="section" height="auto" spacing="none">
       <Header title="What Our Guests Say" />
-      <Grid cols={3} gap="md" spacing="md">
+      <Grid cols={3} gap="lg" spacing="lg">
         {testimonials.map((testimonial, index) => (
-          <Card key={index} className="h-full flex flex-col" variant="secondary">
+          <Card key={index} className="h-full flex flex-col p-5" variant="secondary">
             <div className="flex gap-xs">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Icon
@@ -24,8 +24,8 @@ export default function Testimonials() {
             </div>
             <p className="text-caption text-text-body">{testimonial.quote}</p>
             <div className="mt-auto">
-              <p className="text-body text-text-primary font-weight-bold">- {testimonial.name}</p>
-              <p className="text-caption text-text-secondary">
+              <p className="text-body text-text-primary font-bold">- {testimonial.name}</p>
+              <p className="text-caption text-text-secondary font-light">
                 {testimonial.stayDetail}
               </p>
             </div>

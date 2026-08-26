@@ -7,13 +7,19 @@ import Icon from "../ui/Icon";
 type FAQItemProps = {
   question: string;
   answer: string;
+  variant?:"primary"|"secondary";
 };
+const variantStyles = {
+  primary:"bg-neutral-white",
+  secondary:"bg-neutral-soft"
+}
 
-export default function FAQItem({ question, answer }: FAQItemProps) {
+export default function FAQItem({ question, answer,  variant ="primary", }: FAQItemProps) {
+  
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-neutral-soft bg-neutral-white py-md px-md rounded-sm mt-xs">
+    <div className={`border-b border-neutral-soft py-md px-md rounded-sm mt-xs ${variantStyles[variant]}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between text-left"

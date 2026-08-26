@@ -56,11 +56,6 @@ export default function StayPage() {
             {amenity.name}</Badge>
             ))}
           </div>
-          <div className="my-5">
-            {property.faqs.map((faq, index) => (
-               <FAQItem key={index} question={faq.question} answer={faq.answer} />
-            ))}
-          </div>
           <div className="mt-auto">
                   <Button
                     variant={`${property.slug==='ranch-house' ? 'primary' : 'secondary'}`}

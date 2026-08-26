@@ -5,6 +5,7 @@ import FAQItem from "../ui/FAQItem";
 import Grid from "../layout/Grid";
 import Header from "../ui/Heading";
 import Card from "../ui/Card";
+import Contact from "./Contact";
 
 export default function AccommodationTemplate({
   name,
@@ -17,6 +18,7 @@ export default function AccommodationTemplate({
   photos,
   hospitableWidgetId,
   faqs,
+  type,
 }: Property) {
   return (
     <Section>
@@ -24,7 +26,6 @@ export default function AccommodationTemplate({
         <div>
         <Header title={name}/>   
         <Card>
-
         <p>{description}</p>
         <div className="self-start">
           <Badge style={availability === "available" ? "success" : "warning"}>
@@ -49,7 +50,11 @@ export default function AccommodationTemplate({
 
         </div>
         <div>
-          <p>widget does here</p>
+           {type === "house" ? (
+       <div>Widget when ready</div>
+      ) : (
+        <Contact />
+      )}
         </div>
 
       </Grid>

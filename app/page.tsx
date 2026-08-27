@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <Hero  
-      imagePublicId="https://res.cloudinary.com/djjqsmlei/image/upload/v1786014672/Kuma%20Tako%20Ranch/Hero/heroImage_fyhrnl.webp"
+      imagePublicId="kuma tako ranch/Hero/heroImage_fyhrnl"
       heading="Escape to Kuma Tako Ranch"
       subheading="A peaceful retreat in the mountains — House and RV sites available"
       buttonLabel="Check Availability"
@@ -31,7 +31,7 @@ export default function Home() {
         </Grid>
       </Section>
       <OurStory 
-        imagePublicId="https://res.cloudinary.com/djjqsmlei/image/upload/v1786029834/Kuma%20Tako%20Ranch/House%20Images/Outside/1-77_mryec8.jpg"
+        imagePublicId="kuma tako ranch/House Images/kumaTakoHouseOutside-10_odvsjn"
         heading="Our Story"
         subheading="From Working Farm to Mountain Retreat"
         description="Kuma Tako Ranch has been our family's home. What started as a working farm has grown into a peaceful retreat, where we now welcome guests to experience the same mountains, forests, and quiet mornings we've always loved."

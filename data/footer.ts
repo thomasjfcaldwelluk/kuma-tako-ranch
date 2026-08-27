@@ -1,11 +1,6 @@
-import {
-  FooterColumn,
-  FooterContact,
-  FooterSocial,
-} from "@/types/footer";
+import { FooterColumn,FooterContact,FooterSocial, } from "@/types/footer";
 
-export const footerTagline =
-  "A peaceful mountain retreat";
+export const footerTagline = "A peaceful mountain retreat";
 
 export const footerColumns: FooterColumn[] = [
   {

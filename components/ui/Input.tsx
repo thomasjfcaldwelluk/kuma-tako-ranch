@@ -16,28 +16,14 @@ export default function Input({
   rows,
   required = true,
 }: InputProps) {
-  const baseStyles =
-    "w-full bg-neutral-white border border-neutral-soft rounded-md px-md py-sm text-body placeholder:text-text-secondary focus:outline-none focus:border-primary-green";
-
+  const baseStyles ="w-full bg-neutral-white border border-neutral-soft rounded-md px-md py-sm text-body placeholder:text-text-secondary focus:outline-none focus:border-primary-green";
   if (Tag === "textarea") {
     return (
-      <textarea
-        name={name}
-        placeholder={placeholder}
-        rows={rows ?? 5}
-        required={required}
-        className={baseStyles}
-      />
+      <textarea name={name} placeholder={placeholder} rows={rows ?? 5} required={required} className={baseStyles}/>
     );
   }
 
   return (
-    <input
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      required={required}
-      className={baseStyles}
-    />
+    <input type={type} name={name} placeholder={placeholder} required={required} className={baseStyles} />
   );
 }

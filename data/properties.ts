@@ -265,7 +265,7 @@ export const properties: Property[] = [
   },
 ],
  photos: [
-      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786031077/Kuma%20Tako%20Ranch/House%20Images/Outside/1-7_p5fm6x.jpg",
+      "kuma tako ranch/House Images/kumaTakoHouseOutside-3_ehvhlf",
       "kuma-tako-ranch/ranch-house/living-room",
       "kuma-tako-ranch/ranch-house/kitchen",
     ],
@@ -330,7 +330,7 @@ export const properties: Property[] = [
     name: "Animal Tracks",
 
     photos: [
-      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555048/Kuma%20Tako%20Ranch/RV/AnimalTracks.jpg",
+      "kuma tako ranch/RV/animal_tracks_bdwuvs",
       "kuma-tako-ranch/animal-tracks/view",
     ],
 
@@ -345,7 +345,7 @@ export const properties: Property[] = [
     name: "Bear Site",
 
     photos: [
-      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555048/Kuma%20Tako%20Ranch/RV/BearSite.jpg",
+      "kuma tako ranch/RV/bear_site_ma4a0y",
       "kuma-tako-ranch/bear-site/view",
     ],
 
@@ -360,7 +360,7 @@ export const properties: Property[] = [
     name: "Elk Crossing",
 
     photos: [
-      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555047/Kuma%20Tako%20Ranch/RV/ElkCrossing.jpg",
+      "kuma tako ranch/RV/elks_crossing_rs8dbq",
       "kuma-tako-ranch/elk-crossing/view",
     ],
 
@@ -375,7 +375,7 @@ export const properties: Property[] = [
     name: "Octopus Site",
 
     photos: [
-      "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555047/Kuma%20Tako%20Ranch/RV/ElkCrossing.jpg",
+       "kuma tako ranch/RV/elks_crossing_rs8dbq",
       "https://res.cloudinary.com/djjqsmlei/image/upload/v1786555047/Kuma%20Tako%20Ranch/RV/ElkCrossing.jpg",
     ],
 

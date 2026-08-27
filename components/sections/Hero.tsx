@@ -21,7 +21,7 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-      <CldImage src={imagePublicId} alt={heading} fill priority className="object-cover" />
+      <CldImage src={imagePublicId} alt={heading} fill priority className="object-cover" sizes="100vw"/>
       <div className="absolute inset-0 bg-black/40" />
       <Container>
         <div className="relative z-10 flex flex-col items-center text-center gap-md">

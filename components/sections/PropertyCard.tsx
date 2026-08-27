@@ -17,45 +17,23 @@ export default function PropertyCard({
 }: Property) {
   return (
     <Card imagePublicId={photos[0]} imageAlt={name}>
-
       <div className="self-start">
-        <Badge
-          style={availability === "available" ? "success" : "warning"}
-        >
-          {availability === "available"
-            ? "Available Now"
-            : "Limited Availability"}
+        <Badge  style={availability === "available" ? "success" : "warning"}>
+          {availability === "available" ? "Available Now" : "Limited Availability"}
         </Badge>
       </div>
       <h3 className="text-h3">{name}</h3>
       <div className="flex gap-sm text-small text-text-secondary">
-        {beds > 0 && (
-          <span className="flex items-center gap-xs">
-            <Icon name="bed" size="sm" />
-            {beds} Beds
-          </span>
+        {beds > 0 && (<span className="flex items-center gap-xs"> <Icon name="bed" size="sm" />{beds} Beds</span>
         )}
-        <span className="flex items-center gap-xs">
-          <Icon name="guests" size="sm" />
-          {guests} Guests
-        </span>
+        <span className="flex items-center gap-xs"><Icon name="guests" size="sm" />{guests} Guests</span>
       </div>
-
-      <p className="text-caption text-text-secondary">
-        {description}
-      </p>
-
+      <p className="text-caption text-text-secondary">{description}</p>
       <div className="mt-auto">
-        <Button
-          variant={`${slug==='ranch-house' ? 'primary' : 'secondary'}`}
-          href={`/stay/${slug}`}
-          size="md"
-          className="w-full"
-        >
+        <Button variant={`${slug==='ranch-house' ? 'primary' : 'secondary'}`} href={`/stay/${slug}`} size="md"  className="w-full">
           Book Now
         </Button>
       </div>
-
     </Card>
   );
 }

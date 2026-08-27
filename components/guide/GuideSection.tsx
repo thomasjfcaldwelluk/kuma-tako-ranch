@@ -17,9 +17,7 @@ export default function GuideSection({
     <Section bgColor="cream">
       <Header title={title} />
       <Grid cols={3} gap="sm" spacing="xl">
-        {items.map((item) => (
-          <GuideCard key={item.slug} item={item} />
-        ))}
+        {items.map((item) => (<GuideCard key={item.slug} item={item} />))}
       </Grid>
     </Section>
   );

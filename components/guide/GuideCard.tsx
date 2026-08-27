@@ -20,37 +20,18 @@ export default function GuideCard({
 }: GuideCardProps) {
   return (
     <Card>
-      <h3 className="text-h3 text-text-primary text-center">
-        {item.name}
-      </h3>
-
+      <h3 className="text-h3 text-text-primary text-center">{item.name}</h3>
       <p className="text-small text-text-secondary">{item.description}</p>
-
-      <p className="text-small text-text-secondary font-regular">
-        Location: <span className="text-body text-text-primary font-semi-bold">{item.location}</span>
-      </p>
-
+      <p className="text-small text-text-secondary font-regular">Location: <span className="text-body text-text-primary font-semi-bold">{item.location}</span></p>
       {item.difficulty && (
-        <p className="text-small text-text-secondary font-regular" >
-          Difficulty: <span className={`text-body ${difficultyStyles[item.difficulty]}`}>{item.difficulty}</span>
-        </p>
+        <p className="text-small text-text-secondary font-regular" >Difficulty: <span className={`text-body ${difficultyStyles[item.difficulty]}`}>{item.difficulty}</span></p>
       )}
-<div className="w-fit">
-      {item.dogsAllowed !== undefined && (
-        <Badge style={item.dogsAllowed === true ? "success" : "warning"}>
-          Dogs: {item.dogsAllowed ? "Allowed" : "Not allowed"}
-        </Badge>
+      <div className="w-fit">
+      {item.dogsAllowed !== undefined && (<Badge style={item.dogsAllowed === true ? "success" : "warning"}>Dogs: {item.dogsAllowed ? "Allowed" : "Not allowed"}</Badge>
       )}
-</div>
-
-      {item.website && (
-        <Button variant="outline" className="mt-auto"
-          href={item.website}
-          // target="_blank"
-          // rel="noopener noreferrer"
-        >
-          More information
-        </Button>
+      </div>
+      {item.website && (<Button variant="outline" className="mt-auto"href={item.website}// target="_blank"// rel="noopener noreferrer"
+        > More information</Button>
       )}
     </Card>
   );

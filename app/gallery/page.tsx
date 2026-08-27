@@ -4,9 +4,9 @@ import Header from "@/components/ui/Heading";
 
 export default function GalleryPage(){
   return (
-    <div>
+    <main>
       <Header title="Gallery" />
       <HomeGallery images={homeGallery}/>
-    </div>
+    </main>
   );
 }

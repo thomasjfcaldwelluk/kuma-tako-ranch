@@ -53,7 +53,7 @@ export const footerColumns: FooterColumn[] = [
 ];
 
 export const footerContact: FooterContact = {
-  address: "123 Road, Ashford, WA 98925",
+  address: "28421 State Route 706 E Ashford WA 98304",
   email: "info@kumatakoranch.com",
   phone: "(360)7680971",
 };

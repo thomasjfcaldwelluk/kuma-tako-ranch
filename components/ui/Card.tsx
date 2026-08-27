@@ -29,23 +29,13 @@ export default function Card({
   className = "",
 }: CardProps) {
   return (
-    <div
-      className={`rounded-lg shadow-sm overflow-hidden flex flex-col ${variantStyles[variant]} ${className}`}
-    >
+    <div className={`rounded-lg shadow-sm overflow-hidden flex flex-col ${variantStyles[variant]} ${className}`}>
       {imagePublicId && (
         <div className={`relative w-full ${imageHeightMap[imageHeight]}`}>
-          <CldImage
-            src={imagePublicId}
-            alt={imageAlt}
-            fill
-            className="object-cover"
-          />
+          <CldImage src={imagePublicId} alt={imageAlt} fill className="object-cover"/>
         </div>
       )}
-
-      <div className="p-md flex flex-col gap-sm flex-1">
-        {children}
-      </div>
+      <div className="p-md flex flex-col gap-sm flex-1">{children}</div>
     </div>
   );
 }

@@ -14,20 +14,13 @@ export default function Testimonials() {
           <Card key={index} className="h-full flex flex-col p-5" variant="secondary">
             <div className="flex gap-xs">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Icon
-                  key={i}
-                  name="star"
-                  size="lg"
-                  className="text-rating-yellow fill-rating-yellow" 
-                />
+                <Icon key={i} name="star" size="lg" className="text-rating-yellow fill-rating-yellow"/>
               ))}
             </div>
             <p className="text-caption text-text-body">{testimonial.quote}</p>
             <div className="mt-auto">
               <p className="text-body text-text-primary font-bold">- {testimonial.name}</p>
-              <p className="text-caption text-text-secondary font-light">
-                {testimonial.stayDetail}
-              </p>
+              <p className="text-caption text-text-secondary font-light">{testimonial.stayDetail}</p>
             </div>
           </Card>
         ))}

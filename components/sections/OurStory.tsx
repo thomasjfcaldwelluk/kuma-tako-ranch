@@ -29,14 +29,8 @@ export default function OurStory({
           <p className="text-h2 text-center">{subheading}</p>
           <p className="text-small">{description}</p>
         </div>
-
         <div className="relative w-full h-[320px] sm:h-[500px] rounded-xs overflow-hidden">
-          <CldImage
-            src={imagePublicId}
-            alt={alt}
-            fill
-            className="object-cover"
-          />
+          <CldImage src={imagePublicId} alt={alt} fill className="object-cover"/>
         </div>
       </Grid>
     </Section>

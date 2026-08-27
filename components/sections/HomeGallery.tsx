@@ -16,12 +16,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
       <div className="flex flex-col gap-sm px-sm py-sm bg-neutral-cream" >
         {/* Featured image - full width, landscape banner */}
         <div className="relative w-full h-[220px] sm:h-[420px] rounded-sm overflow-hidden">
-          <CldImage
-            src={featured.publicId}
-            alt={featured.alt}
-            fill
-            className="object-cover"
-          />
+          <CldImage src={featured.publicId} alt={featured.alt} fill className="object-cover"/>
         </div>
         {/* Grid - explicit placement, matches reference layout */}
         <div className="grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-2 gap-sm sm:h-[500px]">

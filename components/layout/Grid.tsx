@@ -33,8 +33,6 @@ const gapMap = {
 
 export default function Grid({ cols = 3, spacing='none', gap = "md", children }: GridProps) {
   return (
-    <div className={`grid ${spacingMap[spacing]} ${colsMap[cols]} ${gapMap[gap]}`}>
-      {children}
-    </div>
+    <div className={`grid ${spacingMap[spacing]} ${colsMap[cols]} ${gapMap[gap]}`}>{children}</div>
   );
 }

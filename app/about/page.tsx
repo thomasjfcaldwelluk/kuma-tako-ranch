@@ -6,15 +6,15 @@ import Icon from "@/components/ui/Icon";
 import Card from "@/components/ui/Card";
 import Grid from "@/components/layout/Grid";
 import Header from "@/components/ui/Heading";
+import Section from "@/components/layout/Section";
 
 
 
 export default function About() {
   return (
-    <main className="gap-xl p-lg">
-      <div className="flex flex-col items-center justify-center">
-        {/* <h2 className="text-h1 text-align-center">{aboutContent.title}</h2> */}
+    <Section>
         <Header title={aboutContent.title}/>
+      <div className="flex flex-col items-center justify-center">
         <p className="text-h2 text-text-primary">{aboutContent.subtitle}</p>
         <div className="max-w-[1200px] min-w-[320px] mx-auto my-lg ">
           <p className="text-small text-text-secondary">{aboutContent.description}</p>
@@ -44,7 +44,6 @@ export default function About() {
           </div>
         ))}
       </Grid>
-     
-    </main>
+    </Section>
   );
 }

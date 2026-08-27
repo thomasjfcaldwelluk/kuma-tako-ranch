@@ -20,9 +20,7 @@ export default function Badge({
   children,
 }: BadgeProps) {
   return (
-    <span
-      className={`inline-flex items-center gap-xs px-sm py-xs rounded-full text-caption font-medium ${styleVariants[style]}`}
-    >
+    <span className={`inline-flex items-center gap-xs px-sm py-xs rounded-full text-caption font-medium ${styleVariants[style]}`}>
       {icon && <Icon name={icon} size="xs" />}
       {children}
     </span>

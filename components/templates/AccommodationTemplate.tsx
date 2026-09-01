@@ -1,3 +1,5 @@
+"use client"
+
 import { Property } from "@/types/property";
 import Badge from "../ui/Badge";
 import Section from "../layout/Section";

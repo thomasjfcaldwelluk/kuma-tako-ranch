@@ -1,3 +1,5 @@
+
+
 import { properties } from "@/data/properties";
 import AccommodationTemplate from "@/components/templates/AccommodationTemplate";
 import { notFound } from "next/navigation";

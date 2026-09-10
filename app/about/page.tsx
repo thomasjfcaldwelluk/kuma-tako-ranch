@@ -15,9 +15,9 @@ export default function About() {
     <Section>
         <Header title={aboutContent.title}/>
       <div className="flex flex-col items-center justify-center">
-        <p className="text-h2 text-text-primary">{aboutContent.subtitle}</p>
+        <p className="text-h2 text-text-primary text-center px-4">{aboutContent.subtitle}</p>
         <div className="max-w-[1200px] min-w-[320px] mx-auto my-lg ">
-          <p className="text-small text-text-secondary">{aboutContent.description}</p>
+          <p className="text-small text-text-secondary px-10">{aboutContent.description}</p>
         </div>
       </div>
        <Grid cols={4} spacing="xl">

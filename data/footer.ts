@@ -56,10 +56,10 @@ export const footerContact: FooterContact = {
 export const footerSocials: FooterSocial[] = [
   {
     name: "facebook",
-    href: "#",
+    href: "https://www.facebook.com/KTranch.WA",
   },
   {
     name: "instagram",
-    href: "#",
+    href: "https://www.instagram.com/kuma_tako_ranch/",
   },
 ];

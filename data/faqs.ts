@@ -3,7 +3,7 @@ import { FAQItem } from "@/types/faq";
 export const faqs: FAQItem[] = [
   {
     question: "What time is check-in and check-out?",
-    answer: "Check-in is after 5:00 PM and checkout is before 11:00 AM, with self check-in via smart lock. Early check-in or late checkout may be available for a $100 fee each — just ask.",
+    answer: "Check-in is after 5:00 PM and checkout is before 11:00 AM, with self check-in via smart lock. Early check-in or late checkout may be available for a $50 fee each — this would be due to availability.",
   },
   {
     question: "How many guests can the property accommodate?",
@@ -35,7 +35,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "Is there a hot tub or fire pit?",
-    answer: "Yes, a private hot tub and fire pit are both available on the deck, along with an outdoor surround sound system.",
+    answer: "Yes, a private hot tub and fire pit(wood not provided) are both available on the deck, along with an outdoor surround sound system.",
   },
   {
     question: "Is there parking on-site?",
@@ -51,7 +51,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "What entertainment is available on-site?",
-    answer: "A Peloton gym, pool table, TV, and Bluetooth sound system are all included.",
+    answer: "A Peloton gym, pool table, TV, and Bluetooth sound system are all included. Guests are welcome to pick and enjoy fresh seasonal fruit straight from the ranch, alongside bird watching, beautiful scenic views, and the chance to spot local wildlife roaming freely around the property.",
   },
   {
     question: "Is there laundry access?",

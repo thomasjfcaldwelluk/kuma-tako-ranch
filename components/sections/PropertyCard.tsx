@@ -16,7 +16,7 @@ export default function PropertyCard({
   photos,
 }: Property) {
   return (
-    <Card imagePublicId={photos[0]} imageAlt={name}>
+    <Card imagePublicId={photos[0]} imageAlt={name} imageHeight="xl">
       <div className="self-start">
         <Badge  style={availability === "available" ? "success" : "warning"}>
           {availability === "available" ? "Available Now" : "Limited Availability"}
@@ -30,7 +30,7 @@ export default function PropertyCard({
       </div>
       <p className="text-caption text-text-secondary">{description}</p>
       <div className="mt-auto">
-        <Button variant={`${slug==='ranch-house' ? 'primary' : 'secondary'}`} href={`/stay/${slug}`} size="md"  className="w-full">
+        <Button variant={`${slug==='ranch-house' ? 'primary' : 'secondary'}`} href={`${slug==='ranch-house' ? '/stay/ranch-house' : '/stay/rv-sites'}`} size="md"  className="w-full">
           Book Now
         </Button>
       </div>

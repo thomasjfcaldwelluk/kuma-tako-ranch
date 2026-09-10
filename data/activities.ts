@@ -8,6 +8,8 @@ export const activities: Activity[] = [
     photo: "Kuma Tako Ranch/things to do/hiking_lo5oso",
     style: "overlay",
     icon: "mountain",
+    href:'/things-to-do#hiking',
+    id: "hiking",
   },
   {
     slug: "food",
@@ -15,6 +17,8 @@ export const activities: Activity[] = [
     tagline: "Restaurants, coffee & local favorites",
     style: "icon",
     icon: "kitchen",
+    href:'/things-to-do#food',
+    id: "food",
   },
   {
     slug: "lakes",
@@ -23,6 +27,8 @@ export const activities: Activity[] = [
     photo: "Kuma Tako Ranch/things to do/lakes_ay87l2",
     style: "standard",
     icon: "waves",
+    href:'/things-to-do#lakes',
+    id: "lakes",
   },
 
   {
@@ -32,5 +38,7 @@ export const activities: Activity[] = [
     photo: "Kuma Tako Ranch/things to do/fishing_peds86",
     style: "overlay",
     icon: "fish",
+    href:'/things-to-do#fishing',
+    id: "fishing",
   },
 ];

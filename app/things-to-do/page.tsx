@@ -13,7 +13,8 @@ export default function ThingsToDoPage() {
       return null;
     }
     return (
-      <GuideSection key={activity.slug} title={activity.name} items={items}/>
+      
+        <GuideSection id={activity.id}  key={activity.slug} title={activity.name} items={items} />
     );
   })}
 </section>

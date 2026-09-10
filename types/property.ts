@@ -63,4 +63,5 @@ export type Property = {
   campsiteDetails?: CampsiteDetails;
   bookingDetails?: BookingDetails;
   faqs: { question: string; answer: string }[];
+  photoGallery:{src: string; alt: string}[];
 };

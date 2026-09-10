@@ -19,12 +19,14 @@ export default function Home() {
       imagePublicId="kuma tako ranch/Hero/heroImage_fyhrnl"
       heading="Escape to Kuma Tako Ranch"
       subheading="A peaceful retreat in the mountains — House and RV sites available"
-      buttonLabel="Check Availability"
-      buttonHref="/stay"
+      buttonLabel="Stay at the Ranch"
+      ranchHref="/stay/ranch-house"
+      rvHref="/stay/rv-sites"
+    
        />
       <Section as="section" spacing="none" height="auto" >
         <Header title="Where You Will Stay" />
-        <Grid cols={5} gap="sm" spacing='sm'>
+        <Grid cols={2} gap="lg" spacing='xl'>
           {properties.map((property) => (
             <PropertyCard key={property.slug} {...property} />
           ))}

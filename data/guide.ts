@@ -474,20 +474,6 @@ export const guideItems: GuideItem[] = [
   },
 
   {
-    slug: "paradise-village-restaurant",
-    name: "Paradise Village Restaurant",
-    activity: "food",
-    subcategory: "Ashford Restaurants",
-    location: "Ashford",
-    description:
-      "A relaxed restaurant serving European comfort food.",
-    distanceFromRanch: "Ashford",
-    tags: ["restaurant", "european", "comfort-food"],
-    website:
-      "https://www.paradisevillageresort.com/restaurant",
-  },
-
-  {
     slug: "ukrainian-cuisine-restaurant",
     name: "Ukrainian Cuisine Restaurant",
     activity: "food",

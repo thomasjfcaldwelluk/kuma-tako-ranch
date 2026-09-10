@@ -4,7 +4,7 @@ type CardProps = {
   variant?:"primary"|"secondary";
   imagePublicId?: string;
   imageAlt?: string;
-  imageHeight?: "sm" | "md" | "lg";
+  imageHeight?: "sm" | "md" | "lg" | "xl";
   children: React.ReactNode;
   className?: string;
 };
@@ -18,6 +18,7 @@ const imageHeightMap = {
   sm: "h-40",
   md: "h-48",
   lg: "h-56",
+  xl: "h-72",
 };
 
 export default function Card({

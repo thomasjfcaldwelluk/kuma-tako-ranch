@@ -10,8 +10,8 @@ export default function Contact() {
       return <p>Thanks for joining!</p>;
   }
     return (
-    <Section as="section" spacing="none" height="auto" className="bg-neutral-cream">
-      <form onSubmit={handleSubmit} className="w-full flex flex-col gap-md text-center bg-neutral-cream">
+    <Section as="section" spacing="none" height="auto" className="bg-neutral-cream ">
+      <form onSubmit={handleSubmit} className="w-full flex flex-col gap-md text-center bg-neutral-cream p-2 rounded-sm">
         <div>
           <h2 className="text-h2">Get In Touch</h2>
           <p className="text-body text-text-secondary">Have a question? We will get back to you within 24 hours</p>
@@ -22,7 +22,7 @@ export default function Contact() {
           <ValidationError  prefix="Email" field="email" errors={state.errors}/>
         <Input as="textarea" name="message" placeholder="Your Message" rows={5} />
           <ValidationError  prefix="Message" field="message"errors={state.errors}/>
-        <button type="submit" disabled={state.submitting} className="mx-auto bg-primary-green text-neutral-white hover:bg-primary-dark-green px-lg py-sm text-[length:var(--text-small)]">Send Message</button>
+        <button type="submit" disabled={state.submitting} className="mx-auto bg-primary-green text-neutral-white hover:bg-primary-dark-green px-lg py-sm rounded-sm text-[length:var(--text-small)]">Send Message</button>
       </form>
     </Section>
   )

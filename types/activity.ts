@@ -13,6 +13,8 @@ type PhotoActivity = {
   photo: string;
   style: "overlay" | "standard";
   icon?: IconName;
+  href: string;
+  id: string;
 };
 
 
@@ -22,6 +24,8 @@ type IconActivity = {
   tagline: string;
   style: "icon";
   icon: IconName;
+  href: string;
+  id: string;
 };
 
 

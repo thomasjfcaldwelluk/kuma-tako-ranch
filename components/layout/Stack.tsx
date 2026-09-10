@@ -1,10 +1,11 @@
-import { BetweenHorizonalEnd } from "lucide-react";
+
 
 type StackProps = {
   direction?: "row" | "col";
   gap?: "xs" | "sm" | "md" | "lg" | "xl";
   align?: "start" | "center" | "end" | "stretch";
   justify?:"end" | "between" | "evenly" | "center" | "stretch";
+  wrap?: boolean;
   children: React.ReactNode;
 };
 const alignMap = {
@@ -34,9 +35,9 @@ const gapMap = {
   xl: "gap-xl",
 };
 
-export default function Stack({ direction = "col", gap = "xs", align='center', justify='center', children }: StackProps) {
+export default function Stack({ direction = "col", gap = "xs", align='center', justify='center',wrap = false, children }: StackProps) {
   return (
-    <div className={`flex ${directionMap[direction]} ${gapMap[gap]} ${alignMap[align]} ${justifyMap[justify]}`}>
+    <div className={`flex ${directionMap[direction]} ${gapMap[gap]} ${alignMap[align]} ${justifyMap[justify]} ${wrap ? "flex-wrap" : "flex-nowrap"}`}>
       {children}
     </div>
   );

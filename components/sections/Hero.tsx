@@ -9,7 +9,8 @@ type HeroProps = {
   heading: string;
   subheading: string;
   buttonLabel: string;
-  buttonHref: string;
+  ranchHref: string;
+  rvHref: string;
 };
 
 export default function Hero({
@@ -17,17 +18,21 @@ export default function Hero({
   heading,
   subheading,
   buttonLabel,
-  buttonHref,
+  ranchHref,
+  rvHref
 }: HeroProps) {
   return (
     <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-      <CldImage src={imagePublicId} alt={heading} fill priority className="object-cover" sizes="100vw"/>
+      <CldImage src={imagePublicId} alt={heading} fill loading="eager" className="object-cover" sizes="100vw"/>
       <div className="absolute inset-0 bg-black/40" />
       <Container>
         <div className="relative z-10 flex flex-col items-center text-center gap-md">
           <h1 className="text-display text-neutral-white">{heading}</h1>
           <p className="text-body text-neutral-white/90">{subheading}</p>
-          <Button href={buttonHref} variant="primary" size="md">{buttonLabel}</Button>
+          <div className="flex justify-content gap-sm"> 
+          <Button href={ranchHref} variant="primary" size="md">{buttonLabel}</Button>
+          <Button href={rvHref} variant="secondary" size="md">RV Sites</Button>
+          </div>
         </div>
       </Container>
     </section>

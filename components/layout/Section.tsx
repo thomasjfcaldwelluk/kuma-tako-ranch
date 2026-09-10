@@ -5,6 +5,7 @@ type SectionProps = {
   spacing?: "none" | "xs" | "sm" | "md" | "lg" | "xl";
   height?: "auto" | "sm" | "md" | "lg" | "xl" | "full";
   bgColor?: "primary" | "secondary" | "neutral" | "dark" |"cream";
+  id?: string;
   className?: string;
   children: React.ReactNode;
 };
@@ -40,11 +41,12 @@ export default function Section({
   spacing = "none",
   height = "auto",
   bgColor = "neutral",
+  id,
   className = "",
   children,
 }: SectionProps) {
   return (
-    <Tag className={`${spacingMap[spacing]} ${heightMap[height]} ${bgColorMap[bgColor]} ${className}`} >
+    <Tag id={id} className={`${spacingMap[spacing]} ${heightMap[height]} ${bgColorMap[bgColor]} ${className}`} >
       <Container>{children}</Container>
     </Tag>
   );

@@ -35,7 +35,7 @@ export default function StayPage() {
             {property.amenities.map((amenity) => (<Badge key={amenity.name} icon={amenity.icon}>{amenity.name}</Badge>))}
           </div>
           <div className="mt-auto">
-            <Button variant={`${property.slug==='ranch-house' ? 'primary' : 'secondary'}`} href={`/stay/${property.slug}`}size="md" className="w-full">
+            <Button variant={`${property.slug==='ranch-house' ? 'primary' : 'secondary'}`} href={`${property.slug==='ranch-house' ? '/stay/ranch-house' : '/stay/rv-sites'}`} size="md" className="w-full">
             Book Now
             </Button>
           </div>

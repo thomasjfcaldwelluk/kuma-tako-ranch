@@ -1,7 +1,5 @@
-
 import Section from "../layout/Section";
 import Input from "../ui/Input";
-import Button from "../ui/Button";
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {

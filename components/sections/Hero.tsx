@@ -21,15 +21,18 @@ export default function Hero({
   ranchHref,
   rvHref,
 }: HeroProps) {
-  const videoUrl = getCldVideoUrl({ src: videoPublicId });
-   const posterUrl = getCldVideoUrl({
+  const videoUrl = getCldVideoUrl({
+    src: videoPublicId,
+    rawTransformations: ["f_auto", "q_auto"], // let Cloudinary pick a codec the device actually supports
+  });
+  const posterUrl = getCldVideoUrl({
     src: videoPublicId,
     rawTransformations: ["so_0"],
     format: "jpg",
   });
 
   return (
-    <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[600px] flex items-center justify-center overflow-hidden isolate">
       <video
         src={videoUrl}
         poster={posterUrl}
@@ -38,9 +41,9 @@ export default function Hero({
         loop
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       />
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/40 z-0" />
       <Container>
         <div className="relative z-10 flex flex-col items-center text-center gap-md">
           <h1 className="text-display text-neutral-white">{heading}</h1>

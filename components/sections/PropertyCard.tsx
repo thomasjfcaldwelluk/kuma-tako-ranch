@@ -16,6 +16,7 @@ export default function PropertyCard({
   photos,
 }: Property) {
   return (
+    
     <Card imagePublicId={photos[0]} imageAlt={name} imageHeight="xl">
       <div className="self-start">
         <Badge  style={availability === "available" ? "success" : "warning"}>
@@ -35,5 +36,6 @@ export default function PropertyCard({
         </Button>
       </div>
     </Card>
+    
   );
 }

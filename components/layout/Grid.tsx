@@ -4,6 +4,7 @@ type GridProps = {
   gap?: "none"|"xs" | "sm" | "md" | "lg" | "xl";
   spacing?: "none"|"xs" | "sm" | "md" | "lg" | "xl";
   hideOnMobile?: boolean;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -41,9 +42,9 @@ const gapMap = {
   xl: "gap-xl",
 };
 
-export default function Grid({ cols = 3, rows = 1, spacing='none', gap = "md",hideOnMobile = false, children }: GridProps) {
+export default function Grid({ cols = 3, rows = 1, spacing='none', gap = "md",hideOnMobile = false,className = "", children }: GridProps) {
   return (
-    <div className={`${hideOnMobile ? "hidden md:grid" : "grid"} ${spacingMap[spacing]} ${colsMap[cols]} ${rowsMap[rows]} ${gapMap[gap]}`}>
+    <div className={`${hideOnMobile ? "hidden md:grid" : "grid"} ${spacingMap[spacing]} ${colsMap[cols]} ${rowsMap[rows]} ${gapMap[gap]} ${className}`}>
       {children}
     </div>
   );

@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <Hero  
-      imagePublicId="kuma tako ranch/Hero/heroImage_fyhrnl"
+      videoPublicId="kuma tako ranch/Hero/Ashford_qolvp0"
       heading="Escape to Kuma Tako Ranch"
       subheading="A peaceful retreat in the mountains — House and RV sites available"
       buttonLabel="Stay at the Ranch"
@@ -26,7 +26,7 @@ export default function Home() {
        />
       <Section as="section" spacing="none" height="auto" >
         <Header title="Where You Will Stay" />
-        <Grid cols={2} gap="lg" spacing='xl'>
+        <Grid cols={2} gap="lg" className="px-5">
           {properties.map((property) => (
             <PropertyCard key={property.slug} {...property} />
           ))}
@@ -44,7 +44,7 @@ export default function Home() {
       <Testimonials/>
       <Cta/>
       <HomeContact  
-        imagePublicId="Kuma Tako Ranch/House Images/Outside/contact"
+        imagePublicId="Kuma Tako Ranch/Hero/heroImage_fyhrnl"
         alt="image of house at night"
         />
     </main>

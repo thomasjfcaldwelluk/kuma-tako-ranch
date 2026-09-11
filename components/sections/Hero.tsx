@@ -1,11 +1,11 @@
 "use client";
 
-import { CldImage } from "next-cloudinary";
+import { getCldVideoUrl } from "next-cloudinary";
 import Container from "../layout/Container";
 import Button from "../ui/Button";
 
 type HeroProps = {
-  imagePublicId: string;
+  videoPublicId: string;
   heading: string;
   subheading: string;
   buttonLabel: string;
@@ -14,24 +14,40 @@ type HeroProps = {
 };
 
 export default function Hero({
-  imagePublicId,
+  videoPublicId,
   heading,
   subheading,
   buttonLabel,
   ranchHref,
-  rvHref
+  rvHref,
 }: HeroProps) {
+  const videoUrl = getCldVideoUrl({ src: videoPublicId });
+   const posterUrl = getCldVideoUrl({
+    src: videoPublicId,
+    rawTransformations: ["so_0"],
+    format: "jpg",
+  });
+
   return (
     <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-      <CldImage src={imagePublicId} alt={heading} fill loading="eager" className="object-cover" sizes="100vw"/>
+      <video
+        src={videoUrl}
+        poster={posterUrl}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       <div className="absolute inset-0 bg-black/40" />
       <Container>
         <div className="relative z-10 flex flex-col items-center text-center gap-md">
           <h1 className="text-display text-neutral-white">{heading}</h1>
           <p className="text-body text-neutral-white/90">{subheading}</p>
-          <div className="flex justify-content gap-sm"> 
-          <Button href={ranchHref} variant="primary" size="md">{buttonLabel}</Button>
-          <Button href={rvHref} variant="secondary" size="md">RV Sites</Button>
+          <div className="flex justify-content gap-sm">
+            <Button href={ranchHref} variant="primary" size="md">{buttonLabel}</Button>
+            <Button href={rvHref} variant="secondary" size="md">RV Sites</Button>
           </div>
         </div>
       </Container>

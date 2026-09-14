@@ -12,8 +12,12 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: "Kuma Tako Ranch",
-  description: "Your Favorite Mountain Retreat",
+  metadataBase: new URL("https://www.kumatakoranch.com"), 
+  title: {
+    default: "Kuma Tako Ranch",
+    template: "%s | Kuma Tako Ranch",
+  },
+  description: "Mountain getaway with House & RV Sites Near Mt. Rainier National Park",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

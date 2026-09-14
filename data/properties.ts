@@ -23,10 +23,6 @@ export const rvSiteDefaults: Omit<Property, "slug" | "name" | "photos" | "hospit
       icon: "pet-friendly",
     },
     {
-      name: "Fire Pit",
-      icon: "fire-pit",
-    },
-    {
       name: "Water Hook Up",
       icon: "droplet",
     },
@@ -41,7 +37,7 @@ export const rvSiteDefaults: Omit<Property, "slug" | "name" | "photos" | "hospit
   ],
   // hospitableWidgetId: "",
   rigSuitability: {
-    maxLength: "65 feet",
+    maxLength: "65 feet included any tow vehicle",
     siteType: "Back-in",
     surfaceType: "Loose gravel",
     surfaceLevelness: "Flat",
@@ -207,7 +203,7 @@ export const rvSiteDefaults: Omit<Property, "slug" | "name" | "photos" | "hospit
 export const houseProperty: Property = {
   slug: "ranch-house",
 
-  name: "Kuma Tako Ranch",
+  name: "Kuma Tako Ranch House",
 
   type: "house",
 
@@ -219,7 +215,7 @@ export const houseProperty: Property = {
   bathrooms: 3,
 
   description:
-    "Tucked among the pines with sweeping mountain views, Kuma Tako Ranch offers a peaceful escape just minutes from Mt. Rainier. The 4-bedroom house comfortably sleeps up to 8 guests, with a full kitchen, cozy living spaces, and a private porch perfect for morning coffee. Whether you're planning a family gathering or a quiet mountain retreat, this house has everything you need to feel right at home.",
+    "Tucked among the pines with sweeping mountain views, Kuma Tako Ranch offers a peaceful escape just minutes from Mt. Rainier. The 4-bedroom house comfortably sleeps up to 12 guests, with a full kitchen, cozy living spaces, and a private porch perfect for morning coffee. Whether you're planning a family gathering or a quiet mountain retreat, this house has everything you need to feel right at home.",
 
   highlights: [
     "21-acre private mountain estate",

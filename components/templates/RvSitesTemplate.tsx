@@ -34,7 +34,7 @@ export default function RvSitesTemplate() {
         <div className="flex flex-col items-center">
           <Card>
             <div className="flex gap-sm items-center">
-              <h2 className="text-lg font-bold sm:text-xl md:text-2xl">RV Sites</h2>
+              <h1 className="text-lg font-bold sm:text-xl md:text-2xl" >RV Sites At Kuma Tako Ranch</h1>
               <Badge style={rvSiteInfo.availability === "available" ? "success" : "warning"}>
                 {rvSiteInfo.availability === "available" ? "Available Now" : "Limited Availability"}
               </Badge>
@@ -81,7 +81,7 @@ export default function RvSitesTemplate() {
         </div>
 
         <div>
-          <VendorSection/>
+          <VendorSection variant="last-two"/>
           <Contact/>
           <h2 className="text-xl font-bold mb-sm">Photo Gallery</h2>
           <h2 className="text-xl font-bold mb-sm">Choose Your Site</h2>

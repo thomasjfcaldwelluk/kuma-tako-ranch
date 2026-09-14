@@ -53,24 +53,7 @@ export const guideItems: GuideItem[] = [
     kidFriendly: true,
     tags: ["family-friendly", "forest", "old-growth"],
     website:
-      "https://www.alltrails.com/trail/us/washington/twin-firs-loop",
-  },
-
-  {
-    slug: "grove-of-the-patriarchs",
-    name: "Grove of the Patriarchs",
-    activity: "hiking",
-    subcategory: "Easy Hikes",
-    location: "Ohanapecosh",
-    description:
-      "A beautiful walk among enormous old-growth trees on an island surrounded by the Ohanapecosh River.",
-    distanceFromRanch: "Ohanapecosh area",
-    difficulty: "Easy",
-    dogsAllowed: false,
-    kidFriendly: true,
-    tags: ["family-friendly", "old-growth", "scenic"],
-    website:
-      "https://www.nps.gov/mora/planyourvisit/grove-of-the-patriarchs.htm",
+      "https://www.alltrails.com/trail/us/washington/twin-firs-loop-trail",
   },
 
   {
@@ -87,9 +70,8 @@ export const guideItems: GuideItem[] = [
     kidFriendly: true,
     tags: ["family-friendly", "waterfall", "forest"],
     website:
-      "https://www.alltrails.com/trail/us/washington/silver-falls-loop",
+      "https://www.alltrails.com/poi/us/california/silver-falls?utm_medium=sem&utm_source=google&utm_sub=text&utm_campaign=18206399729&utm_term=&utm_device=c&gad_source=1&gad_campaignid=18206399729&gbraid=0AAAAAD4bpD8CafHmH0GmMRUY0il8WQWzd&gclid=Cj0KCQjw8JPVBhD-ARIsAO691sEGoe67Cwd0Pljzp1s2WUZBl_NaIQl3cts4SqkAV6k1iBioKU8Gj2AaAtqUEALw_wcB",
   },
-
   {
     slug: "bench-and-snow-lakes",
     name: "Bench & Snow Lakes",
@@ -155,9 +137,8 @@ export const guideItems: GuideItem[] = [
     kidFriendly: false,
     tags: ["waterfall", "scenic", "mountain-views"],
     website:
-      "https://www.alltrails.com/trail/us/washington/narada-falls-to-paradise",
+      "https://www.alltrails.com/trail/us/washington/narada-falls-trail?utm_medium=sem&utm_source=google&utm_sub=text&utm_campaign=18206399729&utm_term=wonderland%20trail%20maps&utm_device=c&gad_source=1&gad_campaignid=18206399729&gbraid=0AAAAAD4bpD8CafHmH0GmMRUY0il8WQWzd&gclid=Cj0KCQjw8JPVBhD-ARIsAO691sHglRaEq2wLioCQYcFtgZU1-OSHBNWiNkXM9ySxQhDZ-4AfcQKTgAcaAnOdEALw_wcB",
   },
-
   {
     slug: "lake-christine",
     name: "Lake Christine",
@@ -245,7 +226,7 @@ export const guideItems: GuideItem[] = [
     kidFriendly: false,
     tags: ["alpine", "mountain-views", "iconic"],
     website:
-      "https://www.alltrails.com/trail/us/washington/burroughs-mountain-loop",
+      "https://www.alltrails.com/trail/us/washington/burroughs-mountain-loop-trail",
   },
 
   {
@@ -304,7 +285,7 @@ export const guideItems: GuideItem[] = [
     kidFriendly: true,
     tags: ["dog-friendly", "fishing", "picnic", "family-friendly"],
     website:
-      "https://www.fs.usda.gov/recarea/giffordpinchot/recarea/?recid=31342",
+      "https://wdfw.wa.gov/fishing/locations/high-lakes/leech-lake-yakima",
   },
 
   {
@@ -325,7 +306,7 @@ export const guideItems: GuideItem[] = [
       "family-friendly",
     ],
     website:
-      "https://www.fs.usda.gov/recarea/giffordpinchot/recarea/?recid=31340",
+      "https://www.fs.usda.gov/r06/okanogan-wenatchee/recreation/clear-lake-day-use-area",
   },
 
   {
@@ -347,6 +328,25 @@ export const guideItems: GuideItem[] = [
     ],
     website: "https://www.minerallake.com/",
   },
+   {
+    slug: "reflection-lake",
+    name: "Reflections Lakes",
+    activity: "lakes",
+    subcategory: "Lakes & Water",
+    location: "Stevens Canyon Road",
+    description:
+      "Reflection Lakes is located along Stevens Canyon Road which is open to vehicles during the summer season, typically from late June-September",
+    distanceFromRanch: "45 minutes from Ashford",
+    dogsAllowed: true,
+    kidFriendly: true,
+    tags: [
+      "dog-friendly",
+      "fishing",
+      "boating",
+      "family-friendly",
+    ],
+    website: "https://www.nps.gov/places/reflection-lakes.htm",
+  },
 
   // =========================================================
   // FISHING
@@ -366,7 +366,6 @@ export const guideItems: GuideItem[] = [
     tags: ["dog-friendly", "lake", "family-friendly"],
     website: "https://www.minerallake.com/",
   },
-
   {
     slug: "leech-lake-fishing",
     name: "Leech Lake Fishing",
@@ -380,7 +379,22 @@ export const guideItems: GuideItem[] = [
     kidFriendly: true,
     tags: ["dog-friendly", "lake", "picnic"],
     website:
-      "https://www.fs.usda.gov/recarea/giffordpinchot/recarea/?recid=31342",
+      "https://wdfw.wa.gov/fishing/locations/high-lakes/leech-lake-yakima",
+  },
+   {
+    slug: "alder-lake",
+    name: "Alder Lake",
+    activity: "fishing",
+    subcategory: "Fishing",
+    location: "Alder",
+    description:
+      "Alder Reservoir is open year-round and offers good harvest opportunity for stocked kokanee",
+    distanceFromRanch: "15 minutes from Ashford",
+    dogsAllowed: true,
+    kidFriendly: true,
+    tags: ["dog-friendly", "lake", "picnic"],
+    website:
+      "https://wdfw.wa.gov/fishing/locations/lowland-lakes/alder-lake",
   },
 
   // =========================================================
@@ -457,7 +471,7 @@ export const guideItems: GuideItem[] = [
       "A restaurant serving Sherpa-Himalayan and American food near Mount Rainier.",
     distanceFromRanch: "Ashford",
     tags: ["restaurant", "himalayan", "american"],
-    website: "https://www.wildberryrestaurant.com/",
+    website: "https://www.rainierwildberry.com/html/wildberry.html",
   },
 
   {
@@ -470,7 +484,7 @@ export const guideItems: GuideItem[] = [
       "A casual local spot serving burgers, pizza and drinks.",
     distanceFromRanch: "Ashford",
     tags: ["restaurant", "burgers", "pizza"],
-    website: "https://www.rainierbasecamp.com/",
+    website: "https://rainierbasecampgrill.com/",
   },
 
   {
@@ -484,7 +498,7 @@ export const guideItems: GuideItem[] = [
     distanceFromRanch: "Ashford",
     tags: ["restaurant", "eastern-european"],
     website:
-      "https://www.facebook.com/ukrainiancuisinerestaurant/",
+      "https://www.paradisevillagelodge.com/restaurant",
   },
 
   {
@@ -498,7 +512,7 @@ export const guideItems: GuideItem[] = [
     distanceFromRanch: "Longmire",
     tags: ["restaurant", "lodge", "national-park"],
     website:
-      "https://www.nps.gov/mora/planyourvisit/national-park-inn.htm",
+      "https://mtrainierguestservices.com/national-park-inn-dining/",
   },
 
   // =========================================================
@@ -516,7 +530,7 @@ export const guideItems: GuideItem[] = [
     distanceFromRanch: "20–25 minutes from Ashford",
     tags: ["restaurant", "burgers", "shakes"],
     website:
-      "https://www.facebook.com/cliffdroppers/",
+      "https://www.yelp.com/biz/cliff-droppers-packwood",
   },
 
   {
@@ -530,7 +544,7 @@ export const guideItems: GuideItem[] = [
     distanceFromRanch: "20–25 minutes from Ashford",
     dogsAllowed: true,
     tags: ["brewery", "food", "dog-friendly", "patio"],
-    website: "https://www.packwoodbrewing.com/",
+    website: "https://www.packwoodbrewingco.com/",
   },
 
   {
@@ -544,7 +558,7 @@ export const guideItems: GuideItem[] = [
     distanceFromRanch: "20–25 minutes from Ashford",
     tags: ["pizza", "restaurant"],
     website:
-      "https://www.facebook.com/CruisersPizzaPackwood/",
+      "https://cruiserspizza.com/",
   },
 
   {
@@ -558,7 +572,7 @@ export const guideItems: GuideItem[] = [
     distanceFromRanch: "20–25 minutes from Ashford",
     tags: ["pub", "live-music", "restaurant"],
     website:
-      "https://www.facebook.com/bluesprucepackwood/",
+      "https://www.yelp.com/biz/blue-spruce-saloon-and-grill-packwood",
   },
 
   {
@@ -571,7 +585,7 @@ export const guideItems: GuideItem[] = [
       "A local coffee stop serving espresso drinks and pastries.",
     distanceFromRanch: "20–25 minutes from Ashford",
     tags: ["coffee", "espresso", "pastries"],
-    website: "https://www.mountaingoatcoffee.com/",
+    website: "https://www.yelp.com/biz/mountain-goat-coffee-packwood",
   },
 
   // =========================================================
@@ -589,23 +603,8 @@ export const guideItems: GuideItem[] = [
     distanceFromRanch: "Ashford",
     tags: ["coffee", "espresso", "quick-stop"],
     website:
-      "https://www.facebook.com/riseandgrindashford/",
+      "https://www.yelp.com/biz/rise-and-grind-ashford",
   },
-
-  {
-    slug: "ashford-valley-grocery",
-    name: "Ashford Valley Grocery",
-    activity: "food",
-    subcategory: "Coffee & Quick Stops",
-    location: "Ashford",
-    description:
-      "A convenient local grocery stop for snacks, drinks and firewood.",
-    distanceFromRanch: "Ashford",
-    tags: ["groceries", "firewood", "quick-stop"],
-    website:
-      "https://www.facebook.com/ashfordvalleygrocery/",
-  },
-
   {
     slug: "whittakers-bunkhouse-cafe",
     name: "Whittaker's Bunkhouse Café",

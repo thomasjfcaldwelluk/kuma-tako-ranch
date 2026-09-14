@@ -23,4 +23,9 @@ export const vendors: VendorImage[] = [
     logo: "Kuma Tako Ranch/VenderLogo/hipcamp-official-logo_l0n7um",
     href: "https://www.hipcamp.com/en-US/land/washington-kuma-tako-ranch-wz6h8pyq",
   },
+  {
+    name:"Harvest Hosts",
+    logo: "Kuma Tako Ranch/VenderLogo/Harvest_Hosts_logo_cft1yk",
+    href: "https://harvesthosts.com/host/kuma-tako-ranch/",
+  }
 ];

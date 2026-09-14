@@ -1,5 +1,5 @@
 "use client";
-
+import { Metadata } from "next";
 import { Property } from "@/types/property";
 import { CldImage } from "next-cloudinary";
 import Badge from "@/components/ui/Badge";
@@ -11,6 +11,14 @@ import Stack from "@/components/layout/Stack";
 import Container from "../layout/Container";
 import VendorSection from "../sections/VendorSection";
 import Contact from "./Contact";
+
+export const metadata: Metadata = {
+  title: "The Ranch House",
+  description: "Kuma Tako Ranch House is a cozy mountain getaway with 4 bedrooms, 3 bathrooms, and a fully equipped kitchen. Enjoy the scenic views and relax in comfort.",
+  alternates: {
+    canonical: "/stay/ranch-house",
+  },
+};
 
 export default function HouseTemplate({
   name,
@@ -44,7 +52,7 @@ export default function HouseTemplate({
     <div className="flex flex-col items-center">
       <Card>
         <div className="flex gap-sm items-center">
-          <h2 className="text-lg font-bold sm:text-xl md:text-2xl">{name}</h2>
+          <h1 className="text-lg font-bold sm:text-xl md:text-2xl">{name}</h1>
           <div className="self-start">
             <Badge style={availability === "available" ? "success" : "warning"}>{availability === "available" ? "Available Now" : "Limited Availability"}</Badge>
           </div>
@@ -72,7 +80,7 @@ export default function HouseTemplate({
       </Card>
     </div>
     <div>
-        <VendorSection/>
+        <VendorSection variant="first-three"/>
         <Contact/>
       <Grid cols={3} gap="xs" spacing="sm" items-center>
         {photoGallery.map((photo, index) => (

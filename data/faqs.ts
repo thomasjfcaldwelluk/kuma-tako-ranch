@@ -46,10 +46,6 @@ export const faqs: FAQItem[] = [
     answer: "About a 15-minute drive to the Nisqually entrance of Mount Rainier National Park, and a 20-minute walk to Ashford County Park.",
   },
   {
-    question: "Are horses or equestrian guests welcome?",
-    answer: "Yes, equestrian guests are welcome — just ask about pasture access and accommodations for your horses.",
-  },
-  {
     question: "What entertainment is available on-site?",
     answer: "A Peloton gym, pool table, TV, and Bluetooth sound system are all included. Guests are welcome to pick and enjoy fresh seasonal fruit straight from the ranch, alongside bird watching, beautiful scenic views, and the chance to spot local wildlife roaming freely around the property.",
   },

@@ -1,5 +1,4 @@
 "use client";
-import { Metadata } from "next";
 import { Property } from "@/types/property";
 import { CldImage } from "next-cloudinary";
 import Badge from "@/components/ui/Badge";
@@ -12,13 +11,6 @@ import Container from "../layout/Container";
 import VendorSection from "../sections/VendorSection";
 import Contact from "./Contact";
 
-export const metadata: Metadata = {
-  title: "The Ranch House",
-  description: "Kuma Tako Ranch House is a cozy mountain getaway with 4 bedrooms, 3 bathrooms, and a fully equipped kitchen. Enjoy the scenic views and relax in comfort.",
-  alternates: {
-    canonical: "/stay/ranch-house",
-  },
-};
 
 export default function HouseTemplate({
   name,

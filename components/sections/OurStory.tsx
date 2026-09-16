@@ -22,7 +22,7 @@ export default function OurStory({
 }: OurStoryProps) {
   return (
     <Section as="section" height="auto">
-      <Header title="Our Story" />
+      <Header title="Our Story" as="h2"/>
       <Grid cols={2} gap="none">
         <div className="flex flex-col justify-center gap-md p-10 bg-neutral-cream">
           <h2 className="text-caption text-center weight-800">{heading}</h2>

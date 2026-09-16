@@ -16,16 +16,16 @@ export default function RvSitesTemplate() {
   return (
     <Section>
       <Container>
-        <Grid cols={3} rows={2} gap="xs" spacing="sm" hideOnMobile>
+        <Grid cols={3} rows={2} gap="md" spacing="md" hideOnMobile>
           <div className="relative lg:col-span-2 lg:row-span-2 min-h-[240px] lg:min-h-[500px]">
-            <CldImage src={rvSiteInfo.photos[0]} alt={rvSiteInfo.name} fill className="rounded-sm object-cover" />
+            <CldImage src={rvSiteInfo.photos[0]} alt={rvSiteInfo.name} height={500} width={450} className="rounded-sm object-cover h-full w-full" />
           </div>
           {/* pick two more representative shots for the hero grid, e.g. from rvSites */}
           <div className="relative min-h-[240px]">
-            <CldImage src={rvSiteInfo.photos[1]} alt={rvSiteInfo.name} fill className="rounded-sm object-cover" />
+            <CldImage src={rvSiteInfo.photos[1]} alt={rvSiteInfo.name} height={240} width={450} className="rounded-sm object-cover h-full w-full" />
           </div>
           <div className="relative min-h-[240px]">
-            <CldImage src={rvSiteInfo.photos[2]} alt={rvSiteInfo.name} fill className="rounded-sm object-cover" />
+            <CldImage src={rvSiteInfo.photos[2]} alt={rvSiteInfo.name} height={240} width={450} className="rounded-sm object-cover h-full w-full" />
           </div>
         </Grid>
       </Container>
@@ -91,8 +91,9 @@ export default function RvSitesTemplate() {
                 <CldImage
                   src={site.photos[0]}
                   alt={site.name}
-                  fill
-                  className="rounded-sm object-cover"
+                  height={180}
+                  width={300}
+                  className="rounded-sm object-cover h-full w-full"
                 />
                 <span className="absolute bottom-2 left-2 bg-neutral-white/90 px-sm py-xs rounded-sm text-caption font-medium">
                   {site.name}
@@ -104,8 +105,9 @@ export default function RvSitesTemplate() {
                 <CldImage
                   src={photo.src}
                   alt={photo.alt}
-                  fill
-                  className="rounded-sm object-cover"
+                  height={180}
+                  width={300}
+                  className="rounded-sm object-cover h-full w-full"
                 />
               </div>
             ))}

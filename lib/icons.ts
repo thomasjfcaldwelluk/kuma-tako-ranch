@@ -20,6 +20,7 @@ import {
   Star,
   Trees,
   Menu, 
+  PlugZap,
   X,
   Droplet,
   Phone,
@@ -27,12 +28,17 @@ import {
   MapPinHouse,
   Waves,
   Fish,
-  Bird
+  Bird,
+  Dumbbell,
+  Hamburger,
+  DoorOpen,
+  Trash
 } from "lucide-react";
 import {
   FaFacebookF,
   FaInstagram,
 } from "react-icons/fa";
+import { RiBilliardsFill } from "react-icons/ri";
 
 export const iconMap = {
   fish:Fish,
@@ -62,10 +68,16 @@ export const iconMap = {
   trees: Trees,
   menu: Menu,
   x: X,
+  "plug-zap": PlugZap,
+  trash: Trash,
   droplet:Droplet,
   bird:Bird,
+  dumbbell:Dumbbell,
+  hamburger:Hamburger,
+  "door-open": DoorOpen,
   facebook: FaFacebookF,
-  instagram: FaInstagram
+  instagram: FaInstagram,
+  "pool-table": RiBilliardsFill
 };
 
 export type IconName = keyof typeof iconMap;

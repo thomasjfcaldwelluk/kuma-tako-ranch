@@ -28,11 +28,11 @@ export const rvSiteDefaults: Omit<Property, "slug" | "name" | "photos" | "hospit
     },
     {
       name: "Electric Hook Up",
-      icon: "droplet",
+      icon: "plug-zap",
     },
     {
       name: "Trash Bins",
-      icon: "droplet",
+      icon: "trash",
     },
   ],
   // hospitableWidgetId: "",
@@ -279,19 +279,19 @@ export const houseProperty: Property = {
     },
     {
       name: "Pool Table",
-      icon: "droplet",
+      icon: "pool-table",
     },
     {
       name: "Gym",
-      icon: "droplet",
+      icon: "dumbbell",
     },
     {
       name: "BBQ",
-      icon: "droplet",
+      icon: "hamburger",
     },
     {
       name: "Self Check In",
-      icon: "droplet",
+      icon: "door-open",
     },
   ],
 photoGallery: [

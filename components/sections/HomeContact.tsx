@@ -15,11 +15,11 @@ type HomeContactProps ={
 export default function HomeContact({imagePublicId, alt,}:HomeContactProps) {
     return (
   <Section as="section" spacing="none" height="auto">
-    <Header title="Contact Us" />
+    <Header title="Contact Us" as="h2"/>
     <VendorSection />
     <Grid cols={2} gap="none">
       <div className="relative w-full h-[320px] sm:h-[500px] rounded-xs overflow-hidden">
-        <CldImage src={imagePublicId} alt={alt} fill  className="object-cover"  />
+        <CldImage src={imagePublicId} alt={alt} height={320} width={450} className="object-cover h-full w-full"  />
       </div>
       <div className="flex flex-col justify-center gap-xl p-2 bg-neutral-cream">
        <Contact />

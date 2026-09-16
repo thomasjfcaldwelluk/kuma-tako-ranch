@@ -11,7 +11,7 @@ export default function ThingsToDo() {
   const [hiking, foodAndDrink, lakes, fishing] = activities;
   return (
     <Section spacing="none" bgColor="neutral">
-      <Header title="Things To Do Nearby" />
+      <Header title="Activities & Things to Do" as="h1" />
       <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-0 md:h-[600px] rounded-xs overflow-hidden">
         <ActivityTile activity={hiking} className="md:col-start-1 md:row-start-1 md:row-span-2" />
         <ActivityTile activity={foodAndDrink} className="md:col-start-2 md:row-start-1" />
@@ -34,7 +34,7 @@ function ActivityTile({ activity,className = "",}: {activity: (typeof activities
   }
   return (
       <Link href={activity.href} className={`relative h-[300px] md:h-auto overflow-hidden ${className}`}>
-        <CldImage src={activity.photo}  alt={activity.name} fill  className="object-cover"/>
+        <CldImage src={activity.photo}  alt={activity.name} height={300} width={450} className="object-cover h-full w-full"/>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-md text-center">
         <h3 className="text-h3 text-neutral-white">{activity.name}</h3>

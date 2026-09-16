@@ -8,8 +8,8 @@ import Icon from "../ui/Icon";
 export default function Testimonials() {
   return (
     <Section as="section" height="auto" spacing="none">
-      <Header title="What Our Guests Say" />
-      <Grid cols={3} gap="lg" spacing="lg">
+      <Header title="What Our Guests Say" as="h2"/>
+      <Grid cols={3} gap="lg" spacing="md">
         {testimonials.map((testimonial, index) => (
           <Card key={index} className="h-full flex flex-col p-5" variant="secondary">
             <div className="flex gap-xs">

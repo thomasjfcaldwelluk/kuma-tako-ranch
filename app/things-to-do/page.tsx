@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Activities & Things to Do",
-  description: "Kuma Tako Ranch offers a variety of activities and things to do for your outdoor adventure. From hiking and fishing to horseback riding and stargazing, there's something for everyone.",
+  description: "Kuma Tako Ranch offers a variety of activities. From hiking and fishing to horseback riding and stargazing, there's something for everyone.",
   alternates: {
     canonical: "/things-to-do",
   },

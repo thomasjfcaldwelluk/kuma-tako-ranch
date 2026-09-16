@@ -25,7 +25,7 @@ export default function Home() {
     
        />
       <Section as="section" spacing="none" height="auto" >
-        <Header title="Where You Will Stay" />
+        <Header title="Where You Will Stay" as="h2"/>
         <Grid cols={2} gap="lg" className="px-5">
           {properties.map((property) => (
             <PropertyCard key={property.slug} {...property} />
